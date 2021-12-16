@@ -25,3 +25,6 @@ img {
   max-width: 100%;
   display: block;
 }
+.m-5 {
+  margin-bottom: 10px;
+}
