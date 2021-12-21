@@ -1,6 +1,6 @@
 import React from "react";
 
-function FourwithOneText({ url1, url2, video, color }) {
+function FourwithOneText({ url1, url2, video, color, text, heading, image }) {
   return (
     <section
       class="elementor-section elementor-top-section elementor-element elementor-element-4e9c2e6 elementor-section-gap-narrow elementor-section-boxed elementor-section-height-default elementor-section-height-default"
@@ -107,8 +107,9 @@ function FourwithOneText({ url1, url2, video, color }) {
                       data-widget_type="heading.default"
                     >
                       <div class="elementor-widget-container">
+                        {image && <img src={image} />}
                         <h1 class="elementor-heading-title elementor-size-default">
-                          Clothing
+                          {heading}
                         </h1>{" "}
                       </div>
                     </div>
@@ -119,20 +120,7 @@ function FourwithOneText({ url1, url2, video, color }) {
                       data-widget_type="text-editor.default"
                     >
                       <div class="elementor-widget-container">
-                        <p>
-                          Want to update your wardrobe with the latest styles?
-                          Our edit of new-in clothing has all the latest trends
-                          in one place. Shop IVLOO DESIGN for everything from
-                          staple T-shirt dresses and jumpsuits to cool co-ords
-                          and statement pieces. Browse Topshop for an everyday
-                          wardrobe refresh, with trousers, shirts and versatile
-                          dresses on rotation. For experimental designs at the
-                          forefront of fashion, check out COLLUSION’s colour
-                          blocking and bold prints. Whether you’re looking to
-                          reinvent your style or find a statement piece for your
-                          weekend wardrobe, our edit of new-in clothing will
-                          keep your ‘fits feeling fresh.
-                        </p>{" "}
+                        <p>{text}</p>{" "}
                       </div>
                     </div>
                     <div

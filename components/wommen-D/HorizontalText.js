@@ -1,6 +1,6 @@
 import React from "react";
 
-function HorizontalText({ text, bg_color, color }) {
+function HorizontalText({ text1, text, bg_color, color }) {
   return (
     <>
       <section
@@ -28,7 +28,8 @@ function HorizontalText({ text, bg_color, color }) {
                     class="elementor-heading-title elementor-size-default"
                     style={{ color: color }}
                   >
-                    {text}
+                    {text1}
+                    <span style={{ fontWeight: "bold" }}>{text}</span>
                   </h2>
                   <b>
                     <b> </b>

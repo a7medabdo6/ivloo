@@ -1,6 +1,17 @@
 import React from "react";
 
-function FiveCol({ url1, url2, url3, url4, url5 }) {
+function FiveCol({
+  url1,
+  url2,
+  url3,
+  url4,
+  url5,
+  text1,
+  text2,
+  text3,
+  text4,
+  text5,
+}) {
   return (
     <>
       <section
@@ -41,7 +52,7 @@ function FiveCol({ url1, url2, url3, url4, url5 }) {
                       role="button"
                     >
                       <span class="elementor-button-content-wrapper">
-                        <span class="elementor-button-text">Accessories</span>
+                        <span class="elementor-button-text">{text5}</span>
                       </span>
                     </a>
                   </div>
@@ -81,9 +92,7 @@ function FiveCol({ url1, url2, url3, url4, url5 }) {
                       role="button"
                     >
                       <span class="elementor-button-content-wrapper">
-                        <span class="elementor-button-text">
-                          Coats &amp; Jackets
-                        </span>
+                        <span class="elementor-button-text">{text4}</span>
                       </span>
                     </a>
                   </div>
@@ -123,7 +132,7 @@ function FiveCol({ url1, url2, url3, url4, url5 }) {
                       role="button"
                     >
                       <span class="elementor-button-content-wrapper">
-                        <span class="elementor-button-text">Dresses</span>
+                        <span class="elementor-button-text">{text3}</span>
                       </span>
                     </a>
                   </div>
@@ -163,7 +172,7 @@ function FiveCol({ url1, url2, url3, url4, url5 }) {
                       role="button"
                     >
                       <span class="elementor-button-content-wrapper">
-                        <span class="elementor-button-text">Jeans</span>
+                        <span class="elementor-button-text">{text2}</span>
                       </span>
                     </a>
                   </div>
@@ -203,7 +212,7 @@ function FiveCol({ url1, url2, url3, url4, url5 }) {
                       role="button"
                     >
                       <span class="elementor-button-content-wrapper">
-                        <span class="elementor-button-text">Swimwear</span>
+                        <span class="elementor-button-text">{text1}</span>
                       </span>
                     </a>
                   </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-function StoriesWithoutText() {
+function StoriesWithoutText({ url1, url2, url3, url4, url5, url6, url7 }) {
   return (
     <>
       <section
@@ -56,11 +56,10 @@ function StoriesWithoutText() {
                     <img
                       width="409"
                       height="429"
-                      src="https://ivloo.com/wp-content/uploads/2021/11/l3.jpg"
+                      src={url1}
                       class="attachment-large size-large"
                       alt=""
                       loading="lazy"
-                      srcset="https://ivloo.com/wp-content/uploads/2021/11/l3.jpg 409w, https://ivloo.com/wp-content/uploads/2021/11/l3-286x300.jpg 286w"
                       sizes="(max-width: 409px) 100vw, 409px"
                     />{" "}
                   </a>
@@ -85,11 +84,10 @@ function StoriesWithoutText() {
                     <img
                       width="409"
                       height="429"
-                      src="https://ivloo.com/wp-content/uploads/2021/11/l6.jpg"
+                      src={url2}
                       class="attachment-large size-large"
                       alt=""
                       loading="lazy"
-                      srcset="https://ivloo.com/wp-content/uploads/2021/11/l6.jpg 409w, https://ivloo.com/wp-content/uploads/2021/11/l6-286x300.jpg 286w"
                       sizes="(max-width: 409px) 100vw, 409px"
                     />{" "}
                   </a>
@@ -114,11 +112,10 @@ function StoriesWithoutText() {
                     <img
                       width="409"
                       height="429"
-                      src="https://ivloo.com/wp-content/uploads/2021/11/l2.jpg"
+                      src={url3}
                       class="attachment-large size-large"
                       alt=""
                       loading="lazy"
-                      srcset="https://ivloo.com/wp-content/uploads/2021/11/l2.jpg 409w, https://ivloo.com/wp-content/uploads/2021/11/l2-286x300.jpg 286w"
                       sizes="(max-width: 409px) 100vw, 409px"
                     />{" "}
                   </a>
@@ -143,11 +140,10 @@ function StoriesWithoutText() {
                     <img
                       width="409"
                       height="429"
-                      src="https://ivloo.com/wp-content/uploads/2021/11/l4.jpg"
+                      src={url4}
                       class="attachment-large size-large"
                       alt=""
                       loading="lazy"
-                      srcset="https://ivloo.com/wp-content/uploads/2021/11/l4.jpg 409w, https://ivloo.com/wp-content/uploads/2021/11/l4-286x300.jpg 286w"
                       sizes="(max-width: 409px) 100vw, 409px"
                     />{" "}
                   </a>
@@ -172,11 +168,10 @@ function StoriesWithoutText() {
                     <img
                       width="409"
                       height="429"
-                      src="https://ivloo.com/wp-content/uploads/2021/11/l7.jpg"
+                      src={url5}
                       class="attachment-large size-large"
                       alt=""
                       loading="lazy"
-                      srcset="https://ivloo.com/wp-content/uploads/2021/11/l7.jpg 409w, https://ivloo.com/wp-content/uploads/2021/11/l7-286x300.jpg 286w"
                       sizes="(max-width: 409px) 100vw, 409px"
                     />{" "}
                   </a>
@@ -201,11 +196,10 @@ function StoriesWithoutText() {
                     <img
                       width="409"
                       height="429"
-                      src="https://ivloo.com/wp-content/uploads/2021/11/l1.jpg"
+                      src={url6}
                       class="attachment-large size-large"
                       alt=""
                       loading="lazy"
-                      srcset="https://ivloo.com/wp-content/uploads/2021/11/l1.jpg 409w, https://ivloo.com/wp-content/uploads/2021/11/l1-286x300.jpg 286w"
                       sizes="(max-width: 409px) 100vw, 409px"
                     />{" "}
                   </a>
@@ -230,11 +224,10 @@ function StoriesWithoutText() {
                     <img
                       width="409"
                       height="429"
-                      src="https://ivloo.com/wp-content/uploads/2021/11/8.jpg"
+                      src={url7}
                       class="attachment-large size-large"
                       alt=""
                       loading="lazy"
-                      srcset="https://ivloo.com/wp-content/uploads/2021/11/8.jpg 409w, https://ivloo.com/wp-content/uploads/2021/11/8-286x300.jpg 286w"
                       sizes="(max-width: 409px) 100vw, 409px"
                     />{" "}
                   </a>

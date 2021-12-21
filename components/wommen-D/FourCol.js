@@ -4,20 +4,20 @@ function FourCol() {
   return (
     <>
       <section
-        class="elementor-section elementor-top-section elementor-element elementor-element-b8e192d elementor-section-gap-narrow elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-        data-id="b8e192d"
+        class="elementor-section elementor-top-section elementor-element elementor-element-8014819 elementor-section-gap-narrow elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+        data-id="8014819"
         data-element_type="section"
       >
         <div class="elementor-container elementor-column-gap-narrow">
           <div
-            class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-5911744"
-            data-id="5911744"
+            class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-27e63bd"
+            data-id="27e63bd"
             data-element_type="column"
           >
-            <div class="elementor-column-wrap--5911744 elementor-widget-wrap elementor-element-populated">
+            <div class="elementor-column-wrap--27e63bd elementor-widget-wrap elementor-element-populated">
               <div
-                class="elementor-element elementor-element-b9eb559 elementor-aspect-ratio-916 elementor-widget elementor-widget-video"
-                data-id="b9eb559"
+                class="elementor-element elementor-element-c35b48c elementor-aspect-ratio-916 elementor-widget elementor-widget-video"
+                data-id="c35b48c"
                 data-element_type="widget"
                 data-settings='{"video_type":"hosted","autoplay":"yes","mute":"yes","aspect_ratio":"916","loop":"yes"}'
                 data-widget_type="video.default"
@@ -38,15 +38,15 @@ function FourCol() {
             </div>
           </div>
           <div
-            class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-c453297 rey-colbg--classic"
-            data-id="c453297"
+            class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-e8eddc1 rey-colbg--classic"
+            data-id="e8eddc1"
             data-element_type="column"
             data-settings='{"background_background":"classic"}'
           >
-            <div class="elementor-column-wrap--c453297 elementor-widget-wrap elementor-element-populated">
+            <div class="elementor-column-wrap--e8eddc1 elementor-widget-wrap elementor-element-populated">
               <section
-                class="elementor-section elementor-inner-section elementor-element elementor-element-7e3ed89 elementor-section-boxed elementor-section-gap-default elementor-section-height-default elementor-section-height-default"
-                data-id="7e3ed89"
+                class="elementor-section elementor-inner-section elementor-element elementor-element-680e8a8 elementor-section-boxed elementor-section-gap-default elementor-section-height-default elementor-section-height-default"
+                data-id="680e8a8"
                 data-element_type="section"
               >
                 <div class="elementor-container elementor-column-gap-default"></div>
@@ -54,27 +54,27 @@ function FourCol() {
             </div>
           </div>
           <div
-            class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-20bdf06 rey-colbg--gradient"
-            data-id="20bdf06"
+            class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-b587ac6 rey-colbg--gradient"
+            data-id="b587ac6"
             data-element_type="column"
             data-settings='{"background_background":"gradient"}'
           >
-            <div class="elementor-column-wrap--20bdf06 elementor-widget-wrap elementor-element-populated">
+            <div class="elementor-column-wrap--b587ac6 elementor-widget-wrap elementor-element-populated">
               <section
-                class="elementor-section elementor-inner-section elementor-element elementor-element-720618a elementor-section-boxed elementor-section-gap-default elementor-section-height-default elementor-section-height-default"
-                data-id="720618a"
+                class="elementor-section elementor-inner-section elementor-element elementor-element-023e4db elementor-section-boxed elementor-section-gap-default elementor-section-height-default elementor-section-height-default"
+                data-id="023e4db"
                 data-element_type="section"
               >
                 <div class="elementor-container elementor-column-gap-default">
                   <div
-                    class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-59c2193 column-flex-dir--vertical"
-                    data-id="59c2193"
+                    class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-c4c9cee column-flex-dir--vertical"
+                    data-id="c4c9cee"
                     data-element_type="column"
                   >
-                    <div class="elementor-column-wrap--59c2193 elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-column-wrap--c4c9cee elementor-widget-wrap elementor-element-populated">
                       <div
-                        class="elementor-element elementor-element-284ffa8 elementor-widget elementor-widget-image"
-                        data-id="284ffa8"
+                        class="elementor-element elementor-element-e2af6c4 elementor-widget elementor-widget-image"
+                        data-id="e2af6c4"
                         data-element_type="widget"
                         data-widget_type="image.default"
                       >
@@ -86,13 +86,14 @@ function FourCol() {
                             class="attachment-full size-full"
                             alt=""
                             loading="lazy"
+                            srcset="https://ivloo.com/wp-content/uploads/2021/11/home-page-page-232-1.png 670w, https://ivloo.com/wp-content/uploads/2021/11/home-page-page-232-1-300x98.png 300w"
                             sizes="(max-width: 670px) 100vw, 670px"
                           />{" "}
                         </div>
                       </div>
                       <div
-                        class="elementor-element elementor-element-dc644ab elementor-widget elementor-widget-heading"
-                        data-id="dc644ab"
+                        class="elementor-element elementor-element-de178df elementor-widget elementor-widget-heading"
+                        data-id="de178df"
                         data-element_type="widget"
                         data-widget_type="heading.default"
                       >
@@ -103,8 +104,8 @@ function FourCol() {
                         </div>
                       </div>
                       <div
-                        class="elementor-element elementor-element-60bd46c elementor-widget elementor-widget-heading"
-                        data-id="60bd46c"
+                        class="elementor-element elementor-element-78118a8 elementor-widget elementor-widget-heading"
+                        data-id="78118a8"
                         data-element_type="widget"
                         data-widget_type="heading.default"
                       >
@@ -115,8 +116,8 @@ function FourCol() {
                         </div>
                       </div>
                       <div
-                        class="elementor-element elementor-element-8edf666 elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
-                        data-id="8edf666"
+                        class="elementor-element elementor-element-28d9f51 elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
+                        data-id="28d9f51"
                         data-element_type="widget"
                         data-widget_type="divider.default"
                       >
@@ -127,8 +128,8 @@ function FourCol() {
                         </div>
                       </div>
                       <div
-                        class="elementor-element elementor-element-f355ba3 elementor-widget elementor-widget-heading"
-                        data-id="f355ba3"
+                        class="elementor-element elementor-element-b38383c elementor-widget elementor-widget-heading"
+                        data-id="b38383c"
                         data-element_type="widget"
                         data-widget_type="heading.default"
                       >
@@ -139,8 +140,8 @@ function FourCol() {
                         </div>
                       </div>
                       <div
-                        class="elementor-element elementor-element-810fe5f elementor-widget elementor-widget-heading"
-                        data-id="810fe5f"
+                        class="elementor-element elementor-element-f24e68d elementor-widget elementor-widget-heading"
+                        data-id="f24e68d"
                         data-element_type="widget"
                         data-widget_type="heading.default"
                       >
@@ -152,8 +153,8 @@ function FourCol() {
                         </div>
                       </div>
                       <div
-                        class="elementor-element elementor-element-e204032 elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
-                        data-id="e204032"
+                        class="elementor-element elementor-element-28e8f2d elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
+                        data-id="28e8f2d"
                         data-element_type="widget"
                         data-widget_type="divider.default"
                       >
@@ -164,8 +165,8 @@ function FourCol() {
                         </div>
                       </div>
                       <div
-                        class="elementor-element elementor-element-20d2ec8 elementor-widget elementor-widget-heading"
-                        data-id="20d2ec8"
+                        class="elementor-element elementor-element-354455d elementor-widget elementor-widget-heading"
+                        data-id="354455d"
                         data-element_type="widget"
                         data-widget_type="heading.default"
                       >
@@ -176,8 +177,8 @@ function FourCol() {
                         </div>
                       </div>
                       <div
-                        class="elementor-element elementor-element-e1dc7c4 elementor-widget elementor-widget-heading"
-                        data-id="e1dc7c4"
+                        class="elementor-element elementor-element-b77e0d5 elementor-widget elementor-widget-heading"
+                        data-id="b77e0d5"
                         data-element_type="widget"
                         data-widget_type="heading.default"
                       >
@@ -189,8 +190,8 @@ function FourCol() {
                         </div>
                       </div>
                       <div
-                        class="elementor-element elementor-element-5faee93 elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
-                        data-id="5faee93"
+                        class="elementor-element elementor-element-deb770b elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
+                        data-id="deb770b"
                         data-element_type="widget"
                         data-widget_type="divider.default"
                       >
@@ -201,8 +202,8 @@ function FourCol() {
                         </div>
                       </div>
                       <div
-                        class="elementor-element elementor-element-5ce3a9c elementor-widget elementor-widget-heading"
-                        data-id="5ce3a9c"
+                        class="elementor-element elementor-element-cb1ba54 elementor-widget elementor-widget-heading"
+                        data-id="cb1ba54"
                         data-element_type="widget"
                         data-widget_type="heading.default"
                       >
@@ -213,8 +214,8 @@ function FourCol() {
                         </div>
                       </div>
                       <div
-                        class="elementor-element elementor-element-6d3ddcd elementor-widget elementor-widget-heading"
-                        data-id="6d3ddcd"
+                        class="elementor-element elementor-element-73ed28c elementor-widget elementor-widget-heading"
+                        data-id="73ed28c"
                         data-element_type="widget"
                         data-widget_type="heading.default"
                       >
@@ -226,8 +227,8 @@ function FourCol() {
                         </div>
                       </div>
                       <div
-                        class="elementor-element elementor-element-bf73d31 elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
-                        data-id="bf73d31"
+                        class="elementor-element elementor-element-c29614f elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
+                        data-id="c29614f"
                         data-element_type="widget"
                         data-widget_type="divider.default"
                       >
@@ -238,8 +239,8 @@ function FourCol() {
                         </div>
                       </div>
                       <div
-                        class="elementor-element elementor-element-1f768d9 elementor-widget elementor-widget-heading"
-                        data-id="1f768d9"
+                        class="elementor-element elementor-element-695a39b elementor-widget elementor-widget-heading"
+                        data-id="695a39b"
                         data-element_type="widget"
                         data-widget_type="heading.default"
                       >
@@ -250,8 +251,8 @@ function FourCol() {
                         </div>
                       </div>
                       <div
-                        class="elementor-element elementor-element-a771aa0 elementor-widget elementor-widget-heading"
-                        data-id="a771aa0"
+                        class="elementor-element elementor-element-7e3149a elementor-widget elementor-widget-heading"
+                        data-id="7e3149a"
                         data-element_type="widget"
                         data-widget_type="heading.default"
                       >
@@ -269,27 +270,27 @@ function FourCol() {
             </div>
           </div>
           <div
-            class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-873f84b rey-colbg--classic"
-            data-id="873f84b"
+            class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-6f3852f rey-colbg--classic"
+            data-id="6f3852f"
             data-element_type="column"
             data-settings='{"background_background":"classic"}'
           >
-            <div class="elementor-column-wrap--873f84b elementor-widget-wrap elementor-element-populated">
+            <div class="elementor-column-wrap--6f3852f elementor-widget-wrap elementor-element-populated">
               <section
-                class="elementor-section elementor-inner-section elementor-element elementor-element-b8e1e29 elementor-section-boxed elementor-section-gap-default elementor-section-height-default elementor-section-height-default"
-                data-id="b8e1e29"
+                class="elementor-section elementor-inner-section elementor-element elementor-element-766830c elementor-section-boxed elementor-section-gap-default elementor-section-height-default elementor-section-height-default"
+                data-id="766830c"
                 data-element_type="section"
               >
                 <div class="elementor-container elementor-column-gap-default">
                   <div
-                    class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-7a27368 column-flex-dir--vertical"
-                    data-id="7a27368"
+                    class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-0c88002 column-flex-dir--vertical"
+                    data-id="0c88002"
                     data-element_type="column"
                   >
-                    <div class="elementor-column-wrap--7a27368 elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-column-wrap--0c88002 elementor-widget-wrap elementor-element-populated">
                       <div
-                        class="elementor-element elementor-element-1429cbd elementor-widget elementor-widget-image"
-                        data-id="1429cbd"
+                        class="elementor-element elementor-element-acea25a elementor-widget elementor-widget-image"
+                        data-id="acea25a"
                         data-element_type="widget"
                         data-widget_type="image.default"
                       >
@@ -301,27 +302,28 @@ function FourCol() {
                             class="attachment-full size-full"
                             alt=""
                             loading="lazy"
+                            srcset="https://ivloo.com/wp-content/uploads/2021/07/home-page-page-2.png 670w, https://ivloo.com/wp-content/uploads/2021/07/home-page-page-2-300x98.png 300w, https://ivloo.com/wp-content/uploads/2021/07/home-page-page-2-20x7.png 20w"
                             sizes="(max-width: 670px) 100vw, 670px"
                           />{" "}
                         </div>
                       </div>
                       <div
-                        class="elementor-element elementor-element-93d39af u-links-anim-ul elementor-widget elementor-widget-text-editor"
-                        data-id="93d39af"
+                        class="elementor-element elementor-element-cdf5d0d u-links-anim-ul elementor-widget elementor-widget-text-editor"
+                        data-id="cdf5d0d"
                         data-element_type="widget"
                         data-widget_type="text-editor.default"
                       >
                         <div class="elementor-widget-container">
                           <div
                             class="elementor-element elementor-element-1f90645 u-links-anim-ul elementor-widget elementor-widget-text-editor"
-                            /* style="width: 313px; margin-bottom: 10px;"*/
+                            style={{ width: "313px", marginTop: "10px" }}
                             data-id="1f90645"
                             data-element_type="widget"
                             data-widget_type="text-editor.default"
                           >
                             <div
                               class="elementor-widget-container"
-                              /* style="margin: 0px;"*/
+                              style={{ margin: "0px" }}
                             >
                               <div
                                 class="elementor-element elementor-element-6a01049 elementor-hidden-phone elementor-widget elementor-widget-text-editor"
@@ -356,8 +358,8 @@ function FourCol() {
                         </div>
                       </div>
                       <div
-                        class="elementor-element elementor-element-d219c3a elementor-button-underline-2 elementor-widget elementor-widget-button"
-                        data-id="d219c3a"
+                        class="elementor-element elementor-element-438ac04 elementor-button-underline-2 elementor-widget elementor-widget-button"
+                        data-id="438ac04"
                         data-element_type="widget"
                         data-widget_type="button.default"
                       >

@@ -1,6 +1,19 @@
 import React from "react";
 
-function SexCol({ url1, url2, url3, url4, url5, url6 }) {
+function SexCol({
+  url1,
+  url2,
+  url3,
+  url4,
+  url5,
+  url6,
+  text1,
+  text2,
+  text3,
+  text4,
+  text5,
+  text6,
+}) {
   return (
     <>
       <section
@@ -33,7 +46,10 @@ function SexCol({ url1, url2, url3, url4, url5, url6 }) {
                 data-element_type="widget"
                 data-widget_type="button.default"
               >
-                <div class="elementor-widget-container">
+                <div
+                  class="elementor-widget-container"
+                  style={{ display: text1 ? "block" : "none" }}
+                >
                   <div class="elementor-button-wrapper">
                     <a
                       href="#"
@@ -41,7 +57,7 @@ function SexCol({ url1, url2, url3, url4, url5, url6 }) {
                       role="button"
                     >
                       <span class="elementor-button-content-wrapper">
-                        <span class="elementor-button-text">SKIN CARE</span>
+                        <span class="elementor-button-text">{text6}</span>
                       </span>
                     </a>
                   </div>
@@ -73,7 +89,10 @@ function SexCol({ url1, url2, url3, url4, url5, url6 }) {
                 data-element_type="widget"
                 data-widget_type="button.default"
               >
-                <div class="elementor-widget-container">
+                <div
+                  class="elementor-widget-container"
+                  style={{ display: text1 ? "block" : "none" }}
+                >
                   <div class="elementor-button-wrapper">
                     <a
                       href="#"
@@ -81,7 +100,7 @@ function SexCol({ url1, url2, url3, url4, url5, url6 }) {
                       role="button"
                     >
                       <span class="elementor-button-content-wrapper">
-                        <span class="elementor-button-text">Body care</span>
+                        <span class="elementor-button-text">{text5}</span>
                       </span>
                     </a>
                   </div>
@@ -113,7 +132,10 @@ function SexCol({ url1, url2, url3, url4, url5, url6 }) {
                 data-element_type="widget"
                 data-widget_type="button.default"
               >
-                <div class="elementor-widget-container">
+                <div
+                  class="elementor-widget-container"
+                  style={{ display: text1 ? "block" : "none" }}
+                >
                   <div class="elementor-button-wrapper">
                     <a
                       href="#"
@@ -121,7 +143,7 @@ function SexCol({ url1, url2, url3, url4, url5, url6 }) {
                       role="button"
                     >
                       <span class="elementor-button-content-wrapper">
-                        <span class="elementor-button-text">SUNCARE</span>
+                        <span class="elementor-button-text">{text4}</span>
                       </span>
                     </a>
                   </div>
@@ -161,7 +183,10 @@ function SexCol({ url1, url2, url3, url4, url5, url6 }) {
                 data-element_type="widget"
                 data-widget_type="button.default"
               >
-                <div class="elementor-widget-container">
+                <div
+                  class="elementor-widget-container"
+                  style={{ display: text1 ? "block" : "none" }}
+                >
                   <div class="elementor-button-wrapper">
                     <a
                       href="#"
@@ -169,7 +194,7 @@ function SexCol({ url1, url2, url3, url4, url5, url6 }) {
                       role="button"
                     >
                       <span class="elementor-button-content-wrapper">
-                        <span class="elementor-button-text">NAILS</span>
+                        <span class="elementor-button-text">{text3}</span>
                       </span>
                     </a>
                   </div>
@@ -201,7 +226,10 @@ function SexCol({ url1, url2, url3, url4, url5, url6 }) {
                 data-element_type="widget"
                 data-widget_type="button.default"
               >
-                <div class="elementor-widget-container">
+                <div
+                  class="elementor-widget-container"
+                  style={{ display: text1 ? "block" : "none" }}
+                >
                   <div class="elementor-button-wrapper">
                     <a
                       href="#"
@@ -209,7 +237,7 @@ function SexCol({ url1, url2, url3, url4, url5, url6 }) {
                       role="button"
                     >
                       <span class="elementor-button-content-wrapper">
-                        <span class="elementor-button-text">Makeup</span>
+                        <span class="elementor-button-text">{text2}</span>
                       </span>
                     </a>
                   </div>
@@ -249,7 +277,10 @@ function SexCol({ url1, url2, url3, url4, url5, url6 }) {
                 data-element_type="widget"
                 data-widget_type="button.default"
               >
-                <div class="elementor-widget-container">
+                <div
+                  class="elementor-widget-container"
+                  style={{ display: text1 ? "block" : "none" }}
+                >
                   <div class="elementor-button-wrapper">
                     <a
                       href="#"
@@ -257,7 +288,7 @@ function SexCol({ url1, url2, url3, url4, url5, url6 }) {
                       role="button"
                     >
                       <span class="elementor-button-content-wrapper">
-                        <span class="elementor-button-text">TANNING</span>
+                        <span class="elementor-button-text">{text1}</span>
                       </span>
                     </a>
                   </div>

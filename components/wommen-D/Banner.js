@@ -1,5 +1,4 @@
 import React from "react";
-
 function Banner() {
   return (
     <>
@@ -124,25 +123,6 @@ function Banner() {
                   <div class="elementor-spacer">
                     <div class="elementor-spacer-inner"></div>
                   </div>
-                </div>
-              </div>
-              <div
-                class="elementor-element elementor-element-ddbf3eb elementor-widget elementor-widget-image"
-                data-id="ddbf3eb"
-                data-element_type="widget"
-                data-widget_type="image.default"
-              >
-                <div class="elementor-widget-container">
-                  <img
-                    width="2048"
-                    height="102"
-                    src="https://ivloo.com/wp-content/uploads/2021/11/iv102-2341.jpg"
-                    class="attachment-full size-full"
-                    alt=""
-                    loading="lazy"
-                    srcset="https://ivloo.com/wp-content/uploads/2021/11/iv102-2341.jpg 2048w, https://ivloo.com/wp-content/uploads/2021/11/iv102-2341-300x15.jpg 300w, https://ivloo.com/wp-content/uploads/2021/11/iv102-2341-1024x51.jpg 1024w, https://ivloo.com/wp-content/uploads/2021/11/iv102-2341-768x38.jpg 768w, https://ivloo.com/wp-content/uploads/2021/11/iv102-2341-1536x77.jpg 1536w, https://ivloo.com/wp-content/uploads/2021/11/iv102-2341-950x47.jpg 950w"
-                    sizes="(max-width: 2048px) 100vw, 2048px"
-                  />{" "}
                 </div>
               </div>
               <div
