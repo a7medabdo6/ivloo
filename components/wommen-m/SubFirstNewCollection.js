@@ -1,6 +1,6 @@
 import React from "react";
 
-function SubFirstNewCollection() {
+function SubFirstNewCollection({ url1, url2, url3, url4 }) {
   return (
     <>
       <section
@@ -58,14 +58,10 @@ function SubFirstNewCollection() {
                     <img
                       width="500"
                       height="669"
-                      src="https://ivloo.com/wp-content/uploads/2021/11/Women_SBB_ALDO.jpeg"
+                      src={url1}
                       class="attachment-full size-full"
                       alt=""
                       loading="lazy"
-                      srcset="
-                                                https://ivloo.com/wp-content/uploads/2021/11/Women_SBB_ALDO.jpeg         500w,
-                                                https://ivloo.com/wp-content/uploads/2021/11/Women_SBB_ALDO-224x300.jpeg 224w
-                                              "
                       sizes="(max-width: 500px) 100vw, 500px"
                     />
                   </a>
@@ -107,17 +103,13 @@ function SubFirstNewCollection() {
                     <img
                       width="355"
                       height="475"
-                      src="https://ivloo.com/wp-content/uploads/2021/11/Dune_Grid-1.jpeg"
+                      src={url2}
                       class="
                                                 attachment-large
                                                 size-large
                                               "
                       alt=""
                       loading="lazy"
-                      srcset="
-                                                https://ivloo.com/wp-content/uploads/2021/11/Dune_Grid-1.jpeg         355w,
-                                                https://ivloo.com/wp-content/uploads/2021/11/Dune_Grid-1-224x300.jpeg 224w
-                                              "
                       sizes="(max-width: 355px) 100vw, 355px"
                     />
                   </a>
@@ -159,14 +151,10 @@ function SubFirstNewCollection() {
                     <img
                       width="500"
                       height="669"
-                      src="https://ivloo.com/wp-content/uploads/2021/11/Women_SBB_CK.jpeg"
+                      src={url3}
                       class="attachment-full size-full"
                       alt=""
                       loading="lazy"
-                      srcset="
-                                                https://ivloo.com/wp-content/uploads/2021/11/Women_SBB_CK.jpeg         500w,
-                                                https://ivloo.com/wp-content/uploads/2021/11/Women_SBB_CK-224x300.jpeg 224w
-                                              "
                       sizes="(max-width: 500px) 100vw, 500px"
                     />
                   </a>
@@ -208,14 +196,10 @@ function SubFirstNewCollection() {
                     <img
                       width="500"
                       height="669"
-                      src="https://ivloo.com/wp-content/uploads/2021/11/Ardene2.jpeg"
+                      src={url4}
                       class="attachment-full size-full"
                       alt=""
                       loading="lazy"
-                      srcset="
-                                                https://ivloo.com/wp-content/uploads/2021/11/Ardene2.jpeg         500w,
-                                                https://ivloo.com/wp-content/uploads/2021/11/Ardene2-224x300.jpeg 224w
-                                              "
                       sizes="(max-width: 500px) 100vw, 500px"
                     />
                   </a>

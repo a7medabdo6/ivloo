@@ -1,6 +1,6 @@
 import React from "react";
 
-function TwoCol() {
+function TwoCol({ url1, url2 }) {
   return (
     <>
       <section
@@ -59,17 +59,13 @@ function TwoCol() {
                     <img
                       width="500"
                       height="669"
-                      src="https://ivloo.com/wp-content/uploads/2021/11/129012-1.jpg"
+                      src={url1}
                       class="
                                                     attachment-full
                                                     size-full
                                                   "
                       alt=""
                       loading="lazy"
-                      srcset="
-                                                    https://ivloo.com/wp-content/uploads/2021/11/129012-1.jpg         500w,
-                                                    https://ivloo.com/wp-content/uploads/2021/11/129012-1-224x300.jpg 224w
-                                                  "
                       sizes="(max-width: 500px) 100vw, 500px"
                     />
                   </a>
@@ -111,17 +107,13 @@ function TwoCol() {
                     <img
                       width="500"
                       height="669"
-                      src="https://ivloo.com/wp-content/uploads/2021/11/br12312.jpg"
+                      src={url2}
                       class="
                                                     attachment-large
                                                     size-large
                                                   "
                       alt=""
                       loading="lazy"
-                      srcset="
-                                                    https://ivloo.com/wp-content/uploads/2021/11/br12312.jpg         500w,
-                                                    https://ivloo.com/wp-content/uploads/2021/11/br12312-224x300.jpg 224w
-                                                  "
                       sizes="(max-width: 500px) 100vw, 500px"
                     />
                   </a>

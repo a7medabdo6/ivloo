@@ -1,6 +1,6 @@
 import React from "react";
 
-function TreeCol() {
+function TreeCol({ url1, url2, url3 }) {
   return (
     <>
       <section
@@ -59,17 +59,13 @@ function TreeCol() {
                     <img
                       width="500"
                       height="669"
-                      src="https://ivloo.com/wp-content/uploads/2021/11/2233122.jpg"
+                      src={url1}
                       class="
                                                     attachment-large
                                                     size-large
                                                   "
                       alt=""
                       loading="lazy"
-                      srcset="
-                                                    https://ivloo.com/wp-content/uploads/2021/11/2233122.jpg         500w,
-                                                    https://ivloo.com/wp-content/uploads/2021/11/2233122-224x300.jpg 224w
-                                                  "
                       sizes="(max-width: 500px) 100vw, 500px"
                     />
                   </a>
@@ -111,17 +107,13 @@ function TreeCol() {
                     <img
                       width="500"
                       height="669"
-                      src="https://ivloo.com/wp-content/uploads/2021/11/902912.jpg"
+                      src={url2}
                       class="
                                                     attachment-large
                                                     size-large
                                                   "
                       alt=""
                       loading="lazy"
-                      srcset="
-                                                    https://ivloo.com/wp-content/uploads/2021/11/902912.jpg         500w,
-                                                    https://ivloo.com/wp-content/uploads/2021/11/902912-224x300.jpg 224w
-                                                  "
                       sizes="(max-width: 500px) 100vw, 500px"
                     />
                   </a>
@@ -163,17 +155,13 @@ function TreeCol() {
                     <img
                       width="500"
                       height="669"
-                      src="https://ivloo.com/wp-content/uploads/2021/11/2233301.jpg"
+                      src={url3}
                       class="
                                                     attachment-large
                                                     size-large
                                                   "
                       alt=""
                       loading="lazy"
-                      srcset="
-                                                    https://ivloo.com/wp-content/uploads/2021/11/2233301.jpg         500w,
-                                                    https://ivloo.com/wp-content/uploads/2021/11/2233301-224x300.jpg 224w
-                                                  "
                       sizes="(max-width: 500px) 100vw, 500px"
                     />
                   </a>

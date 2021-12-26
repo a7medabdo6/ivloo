@@ -1,6 +1,6 @@
 import React from "react";
 
-function Stories() {
+function Stories({ url1, url2, url3, url4, url5, url6, url7 }) {
   return (
     <>
       <section
@@ -56,15 +56,10 @@ function Stories() {
                     <img
                       width="150"
                       height="150"
-                      src="https://ivloo.com/wp-content/uploads/2021/11/levis-1-150x150.png"
+                      src={url1}
                       class="attachment-thumbnail size-thumbnail"
                       alt=""
                       loading="lazy"
-                      srcset="
-                                    https://ivloo.com/wp-content/uploads/2021/11/levis-1-150x150.png 150w,
-                                    https://ivloo.com/wp-content/uploads/2021/11/levis-1-20x20.png    20w,
-                                    https://ivloo.com/wp-content/uploads/2021/11/levis-1-100x100.png 100w
-                                  "
                       sizes="(max-width: 150px) 100vw, 150px"
                     />
                   </a>
@@ -105,15 +100,10 @@ function Stories() {
                     <img
                       width="409"
                       height="429"
-                      src="https://ivloo.com/wp-content/uploads/2021/11/ugg-1.png"
+                      src={url2}
                       class="attachment-large size-large"
                       alt=""
                       loading="lazy"
-                      srcset="
-                                    https://ivloo.com/wp-content/uploads/2021/11/ugg-1.png         409w,
-                                    https://ivloo.com/wp-content/uploads/2021/11/ugg-1-286x300.png 286w,
-                                    https://ivloo.com/wp-content/uploads/2021/11/ugg-1-20x20.png    20w
-                                  "
                       sizes="(max-width: 409px) 100vw, 409px"
                     />
                   </a>
@@ -154,15 +144,10 @@ function Stories() {
                     <img
                       width="409"
                       height="429"
-                      src="https://ivloo.com/wp-content/uploads/2021/11/tommy-1.png"
+                      src={url3}
                       class="attachment-large size-large"
                       alt=""
                       loading="lazy"
-                      srcset="
-                                    https://ivloo.com/wp-content/uploads/2021/11/tommy-1.png         409w,
-                                    https://ivloo.com/wp-content/uploads/2021/11/tommy-1-286x300.png 286w,
-                                    https://ivloo.com/wp-content/uploads/2021/11/tommy-1-20x20.png    20w
-                                  "
                       sizes="(max-width: 409px) 100vw, 409px"
                     />
                   </a>
@@ -203,15 +188,10 @@ function Stories() {
                     <img
                       width="409"
                       height="429"
-                      src="https://ivloo.com/wp-content/uploads/2021/11/ck-1.png"
+                      src={url4}
                       class="attachment-large size-large"
                       alt=""
                       loading="lazy"
-                      srcset="
-                                    https://ivloo.com/wp-content/uploads/2021/11/ck-1.png         409w,
-                                    https://ivloo.com/wp-content/uploads/2021/11/ck-1-286x300.png 286w,
-                                    https://ivloo.com/wp-content/uploads/2021/11/ck-1-20x20.png    20w
-                                  "
                       sizes="(max-width: 409px) 100vw, 409px"
                     />
                   </a>
@@ -252,15 +232,10 @@ function Stories() {
                     <img
                       width="409"
                       height="429"
-                      src="https://ivloo.com/wp-content/uploads/2021/11/polo-1.png"
+                      src={url5}
                       class="attachment-large size-large"
                       alt=""
                       loading="lazy"
-                      srcset="
-                                    https://ivloo.com/wp-content/uploads/2021/11/polo-1.png         409w,
-                                    https://ivloo.com/wp-content/uploads/2021/11/polo-1-286x300.png 286w,
-                                    https://ivloo.com/wp-content/uploads/2021/11/polo-1-20x20.png    20w
-                                  "
                       sizes="(max-width: 409px) 100vw, 409px"
                     />
                   </a>
@@ -301,15 +276,10 @@ function Stories() {
                     <img
                       width="409"
                       height="429"
-                      src="https://ivloo.com/wp-content/uploads/2021/11/ju-1.png"
+                      src={url6}
                       class="attachment-large size-large"
                       alt=""
                       loading="lazy"
-                      srcset="
-                                    https://ivloo.com/wp-content/uploads/2021/11/ju-1.png         409w,
-                                    https://ivloo.com/wp-content/uploads/2021/11/ju-1-286x300.png 286w,
-                                    https://ivloo.com/wp-content/uploads/2021/11/ju-1-20x20.png    20w
-                                  "
                       sizes="(max-width: 409px) 100vw, 409px"
                     />
                   </a>
@@ -350,15 +320,10 @@ function Stories() {
                     <img
                       width="409"
                       height="429"
-                      src="https://ivloo.com/wp-content/uploads/2021/11/ste-1.png"
+                      src={url7}
                       class="attachment-large size-large"
                       alt=""
                       loading="lazy"
-                      srcset="
-                                    https://ivloo.com/wp-content/uploads/2021/11/ste-1.png         409w,
-                                    https://ivloo.com/wp-content/uploads/2021/11/ste-1-286x300.png 286w,
-                                    https://ivloo.com/wp-content/uploads/2021/11/ste-1-20x20.png    20w
-                                  "
                       sizes="(max-width: 409px) 100vw, 409px"
                     />
                   </a>

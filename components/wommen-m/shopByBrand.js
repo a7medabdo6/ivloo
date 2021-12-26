@@ -1,6 +1,6 @@
 import React from "react";
 
-function shopByBrand({ title }) {
+function shopByBrand({ title, image, color, firstword }) {
   return (
     <>
       <section
@@ -54,21 +54,34 @@ function shopByBrand({ title }) {
                 data-widget_type="heading.default"
               >
                 <div class="elementor-widget-container">
-                  <h2
-                    class="
+                  {image && <img src={image} />}
+
+                  {title && (
+                    <h2
+                      style={
+                        color
+                          ? {
+                              height: "35px",
+                              textAlign: "center",
+                              display: "flex",
+                              justifyContent: "center",
+                              alignItems: "center",
+                              background: color,
+                              color: "black",
+                            }
+                          : {}
+                      }
+                      class="
                                       elementor-heading-title
                                       elementor-size-default
                                     "
-                  >
-                    SHOP BY{" "}
-                    <b>
-                      {" "}
-                      {title} <b></b>
-                    </b>
-                  </h2>
-                  <b>
-                    <b> </b>
-                  </b>
+                    >
+                      <span>{firstword ? `${firstword} ` : " SHOP BY "}</span>
+                      <b style={{ marginInline: "2px" }}>
+                        {title} <b></b>
+                      </b>
+                    </h2>
+                  )}
                 </div>
                 <b>
                   <b> </b>

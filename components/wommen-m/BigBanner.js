@@ -1,6 +1,6 @@
 import React from "react";
 
-function BigBanner() {
+function BigBanner({ url }) {
   return (
     <>
       <section
@@ -63,21 +63,13 @@ function BigBanner() {
                     <img
                       width="1920"
                       height="701"
-                      src="https://ivloo.com/wp-content/uploads/2021/11/this-is-i22vlo32o-min-scaled-2-1.jpg"
+                      src={url}
                       class="
                                                                   attachment-full
                                                                   size-full
                                                                 "
                       alt=""
                       loading="lazy"
-                      srcset="
-                                                                  https://ivloo.com/wp-content/uploads/2021/11/this-is-i22vlo32o-min-scaled-2-1.jpg          1920w,
-                                                                  https://ivloo.com/wp-content/uploads/2021/11/this-is-i22vlo32o-min-scaled-2-1-300x110.jpg   300w,
-                                                                  https://ivloo.com/wp-content/uploads/2021/11/this-is-i22vlo32o-min-scaled-2-1-1024x374.jpg 1024w,
-                                                                  https://ivloo.com/wp-content/uploads/2021/11/this-is-i22vlo32o-min-scaled-2-1-768x280.jpg   768w,
-                                                                  https://ivloo.com/wp-content/uploads/2021/11/this-is-i22vlo32o-min-scaled-2-1-1536x561.jpg 1536w,
-                                                                  https://ivloo.com/wp-content/uploads/2021/11/this-is-i22vlo32o-min-scaled-2-1-950x347.jpg   950w
-                                                                "
                       sizes="(max-width: 1920px) 100vw, 1920px"
                     />
                   </a>
