@@ -1,6 +1,93 @@
-import React from "react";
+import React, { useState } from "react";
+import { Dropdown, Accordion, Icon } from "semantic-ui-react";
+import { Dots, slidesToShowPlugin } from "@brainhubeu/react-carousel";
+import dynamic from "next/dynamic";
 
+const Carousel = dynamic(() => import("@brainhubeu/react-carousel"), {
+  ssr: false,
+});
+import "@brainhubeu/react-carousel/lib/style.css";
 function product() {
+  const countryOptions = [
+    { key: "af", value: "af", text: "Afghanistan" },
+    { key: "ax", value: "ax", text: "Aland Islands" },
+    { key: "al", value: "al", text: "Albania" },
+    { key: "dz", value: "dz", text: "Algeria" },
+  ];
+  const [value, setVal] = useState(0);
+
+  const [activeIndex, setactiveIndex] = useState(1);
+  const [activeIndexMobile, setactiveIndexMobile] = useState(1);
+
+  const [Slides, setSlidse] = useState({
+    slides: [
+      <img
+        src={
+          "https://images.asos-media.com/products/asos-design-curve-cotton-shacket-in-light-khaki/200407184-1-lightkhaki?$n_750w$&wid=750&fit=constrain"
+        }
+      />,
+      <img
+        src={
+          "https://images.asos-media.com/products/asos-design-curve-cotton-shacket-in-light-khaki/200407184-1-lightkhaki?$n_750w$&wid=750&fit=constrain"
+        }
+      />,
+      <img
+        src={
+          "https://images.asos-media.com/products/asos-design-curve-cotton-shacket-in-light-khaki/200407184-1-lightkhaki?$n_750w$&wid=750&fit=constrain"
+        }
+      />,
+    ],
+    thumbnails: [
+      <img
+        src={
+          "https://images.asos-media.com/products/asos-design-curve-cotton-shacket-in-light-khaki/200407184-1-lightkhaki?$n_750w$&wid=750&fit=constrain"
+        }
+      />,
+      <img
+        src={
+          "https://images.asos-media.com/products/asos-design-curve-cotton-shacket-in-light-khaki/200407184-1-lightkhaki?$n_750w$&wid=750&fit=constrain"
+        }
+      />,
+      <img
+        src={
+          "https://images.asos-media.com/products/asos-design-curve-cotton-shacket-in-light-khaki/200407184-1-lightkhaki?$n_750w$&wid=750&fit=constrain"
+        }
+      />,
+    ],
+  });
+  const onchange = (value) => {
+    setVal(value);
+  };
+  const DropdownSizes = () => (
+    <Dropdown
+      placeholder="View All sizes"
+      fluid
+      search
+      selection
+      options={countryOptions}
+    />
+  );
+  const DropdownSizesOnMobile = () => (
+    <Dropdown
+      placeholder="sizes"
+      fluid
+      search
+      selection
+      options={countryOptions}
+    />
+  );
+  const handleClick = (e, titleProps) => {
+    const { index } = titleProps;
+    const newIndex = activeIndex === index ? -1 : index;
+
+    setactiveIndex(newIndex);
+  };
+  const handleClickOnMobile = (e, titleProps) => {
+    const { index } = titleProps;
+    const newIndex = activeIndexMobile === index ? -1 : index;
+
+    setactiveIndexMobile(newIndex);
+  };
   return (
     <>
       <head>
@@ -152,99 +239,6 @@ function product() {
                     class="product type-product post-1194241 status-publish first instock product_cat-jackets-coats-jackets has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes rey-product"
                   >
                     <div class="rey-productSummary">
-                      <div class="woocommerce-product-gallery__mobileWrapper">
-                        <div
-                          class="splide woocommerce-product-gallery__mobile splide--slide splide--ltr splide--draggable is-active"
-                          data-slider-config='{"pagination":".r__pagination-1194241"}'
-                          id="splide02"
-                          style={{ visibility: "visible" }}
-                        >
-                          <div class="splide__track" id="splide02-track">
-                            <div
-                              class="splide__list --auto-height"
-                              id="splide02-list"
-                              style={{
-                                transform: "translateX(0px); height: 408.312px",
-                              }}
-                            >
-                              <div
-                                class="splide__slide is-active is-visible"
-                                id="splide02-slide01"
-                                aria-hidden="false"
-                                tabindex="0"
-                              >
-                                <img
-                                  class="woocommerce-product-gallery__mobile-img woocommerce-product-gallery__mobile--0 no-lazy"
-                                  src="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-1-brown?$n_750w$&amp;wid=750&amp;fit=constrain"
-                                  data-index="1"
-                                  data-no-lazy="1"
-                                  data-skip-lazy="1"
-                                  data-full='["https:\/\/images.asos-media.com\/products\/only-faux-leather-jacket-in-brown\/23879362-1-brown?$n_750w$&amp;wid=750&amp;fit=constrain",1,1,false]'
-                                  title="Onlyfauxleatherjacketinbrown-23879362"
-                                />
-                              </div>
-                              <div
-                                class="splide__slide is-visible"
-                                id="splide02-slide02"
-                                aria-hidden="false"
-                                tabindex="0"
-                              >
-                                <img
-                                  class="woocommerce-product-gallery__mobile-img woocommerce-product-gallery__mobile--1 no-lazy"
-                                  data-splide-lazy="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-2?$n_750w$&amp;wid=750&amp;fit=constrain"
-                                  data-index="2"
-                                  data-no-lazy="1"
-                                  data-skip-lazy="1"
-                                  data-full='["https:\/\/images.asos-media.com\/products\/only-faux-leather-jacket-in-brown\/23879362-2?$n_750w$&amp;wid=750&amp;fit=constrain",1,1,false]'
-                                  title="Onlyfauxleatherjacketinbrown-23879362-1"
-                                  srcset=""
-                                  src="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-2?$n_750w$&amp;wid=750&amp;fit=constrain"
-                                />
-                              </div>
-                              <div
-                                class="splide__slide is-visible"
-                                id="splide02-slide03"
-                                aria-hidden="false"
-                                tabindex="0"
-                              >
-                                <img
-                                  class="woocommerce-product-gallery__mobile-img woocommerce-product-gallery__mobile--2 no-lazy"
-                                  data-splide-lazy="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-3?$n_750w$&amp;wid=750&amp;fit=constrain"
-                                  data-index="3"
-                                  data-no-lazy="1"
-                                  data-skip-lazy="1"
-                                  data-full='["https:\/\/images.asos-media.com\/products\/only-faux-leather-jacket-in-brown\/23879362-3?$n_750w$&amp;wid=750&amp;fit=constrain",1,1,false]'
-                                  title="Onlyfauxleatherjacketinbrown-23879362-2"
-                                  style={{ display: "none" }}
-                                />
-                              </div>
-                              <div
-                                class="splide__slide is-visible"
-                                id="splide02-slide04"
-                                aria-hidden="false"
-                                tabindex="0"
-                              >
-                                <img
-                                  class="woocommerce-product-gallery__mobile-img woocommerce-product-gallery__mobile--3 no-lazy"
-                                  data-splide-lazy="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-4?$n_750w$&amp;wid=750&amp;fit=constrain"
-                                  data-index="4"
-                                  data-no-lazy="1"
-                                  data-skip-lazy="1"
-                                  data-full='["https:\/\/images.asos-media.com\/products\/only-faux-leather-jacket-in-brown\/23879362-4?$n_750w$&amp;wid=750&amp;fit=constrain",1,1,false]'
-                                  title="Onlyfauxleatherjacketinbrown-23879362-3"
-                                  style={{ display: "none" }}
-                                />
-                              </div>
-                            </div>
-                          </div>
-                          <div class="r__pagination r__pagination-1194241 --nav-bars is-visible">
-                            <button data-go="0" class="is-active"></button>
-                            <button data-go="1" class=""></button>
-                            <button data-go="2" class=""></button>
-                            <button data-go="3" class=""></button>
-                          </div>
-                        </div>
-                      </div>
                       <div
                         class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-5 images woocommerce-product-gallery--grid --init --even"
                         data-columns="5"
@@ -252,165 +246,58 @@ function product() {
                       >
                         <figure class="woocommerce-product-gallery__wrapper">
                           <div
-                            data-thumb="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-1-brown?$n_750w$&amp;wid=750&amp;fit=constrain"
-                            data-thumb-alt=""
-                            class="woocommerce-product-gallery__image"
-                            data-o_data-thumb="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-1-brown?$n_750w$&amp;wid=750&amp;fit=constrain"
-                          >
-                            <a
-                              href="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-1-brown?$n_750w$&amp;wid=750&amp;fit=constrain"
-                              data-o_href="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-1-brown?$n_750w$&amp;wid=750&amp;fit=constrain"
-                              data-elementor-open-lightbox="no"
-                            >
-                              <img
-                                width="1"
-                                height="1"
-                                src="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-1-brown?$n_750w$&amp;wid=750&amp;fit=constrain"
-                                class="wp-post-image no-lazy"
-                                alt=""
-                                loading="eager"
-                                title="Onlyfauxleatherjacketinbrown-23879362"
-                                data-caption="published"
-                                data-src="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-1-brown?$n_750w$&amp;wid=750&amp;fit=constrain"
-                                data-large_image="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-1-brown?$n_750w$&amp;wid=750&amp;fit=constrain"
-                                data-large_image_width="0"
-                                data-large_image_height="0"
-                                data-skip-lazy="1"
-                                data-no-lazy="1"
-                                data-o_src="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-1-brown?$n_750w$&amp;wid=750&amp;fit=constrain"
-                                data-o_height="1"
-                                data-o_width="1"
-                                data-o_srcset=""
-                                data-o_sizes=""
-                                sizes="(max-width: 1px) 100vw, 1px"
-                                data-o_title="Onlyfauxleatherjacketinbrown-23879362"
-                                data-o_data-caption="published"
-                                data-o_alt=""
-                                data-o_data-src="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-1-brown?$n_750w$&amp;wid=750&amp;fit=constrain"
-                                data-o_data-large_image="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-1-brown?$n_750w$&amp;wid=750&amp;fit=constrain"
-                                data-o_data-large_image_width="0"
-                                data-o_data-large_image_height="0"
-                              />
-                            </a>
-                          </div>
-                          <div
-                            data-thumb="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-2?$n_750w$&amp;wid=750&amp;fit=constrain"
-                            data-thumb-alt=""
-                            class="woocommerce-product-gallery__image --animated-entry --animated-in"
-                            data-scroll="in"
-                            style={{ transitionDelay: "0s" }}
-                          >
-                            <a
-                              href="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-2?$n_750w$&amp;wid=750&amp;fit=constrain"
-                              data-elementor-open-lightbox="no"
-                            >
-                              <img
-                                width="1"
-                                height="1"
-                                src="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-2?$n_750w$&amp;wid=750&amp;fit=constrain"
-                                class="wp-post-image no-lazy"
-                                alt=""
-                                loading="eager"
-                                title="Onlyfauxleatherjacketinbrown-23879362-1"
-                                data-caption="published"
-                                data-src="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-2?$n_750w$&amp;wid=750&amp;fit=constrain"
-                                data-large_image="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-2?$n_750w$&amp;wid=750&amp;fit=constrain"
-                                data-large_image_width="0"
-                                data-large_image_height="0"
-                                data-skip-lazy="1"
-                                data-no-lazy="1"
-                              />
-                            </a>
-                          </div>
-                          <div
-                            data-thumb="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-3?$n_750w$&amp;wid=750&amp;fit=constrain"
-                            data-thumb-alt=""
-                            class="woocommerce-product-gallery__image --animated-entry --animated-in"
-                            data-scroll="in"
-                            style={{ transitionDelay: "0.05s" }}
-                          >
-                            <a
-                              href="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-3?$n_750w$&amp;wid=750&amp;fit=constrain"
-                              data-elementor-open-lightbox="no"
-                            >
-                              <img
-                                width="1"
-                                height="1"
-                                src="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-3?$n_750w$&amp;wid=750&amp;fit=constrain"
-                                class="wp-post-image no-lazy"
-                                alt=""
-                                loading="eager"
-                                title="Onlyfauxleatherjacketinbrown-23879362-2"
-                                data-caption="published"
-                                data-src="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-3?$n_750w$&amp;wid=750&amp;fit=constrain"
-                                data-large_image="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-3?$n_750w$&amp;wid=750&amp;fit=constrain"
-                                data-large_image_width="0"
-                                data-large_image_height="0"
-                                data-skip-lazy="1"
-                                data-no-lazy="1"
-                              />
-                            </a>
-                          </div>
-                          <div
-                            data-thumb="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-4?$n_750w$&amp;wid=750&amp;fit=constrain"
-                            data-thumb-alt=""
-                            class="woocommerce-product-gallery__image --animated-entry --animated-in"
-                            data-scroll="in"
-                            style={{ transitionDelay: "0.1s" }}
-                          >
-                            <a
-                              href="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-4?$n_750w$&amp;wid=750&amp;fit=constrain"
-                              data-elementor-open-lightbox="no"
-                            >
-                              <img
-                                width="1"
-                                height="1"
-                                src="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-4?$n_750w$&amp;wid=750&amp;fit=constrain"
-                                class="wp-post-image no-lazy"
-                                alt=""
-                                loading="eager"
-                                title="Onlyfauxleatherjacketinbrown-23879362-3"
-                                data-caption="published"
-                                data-src="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-4?$n_750w$&amp;wid=750&amp;fit=constrain"
-                                data-large_image="https://images.asos-media.com/products/only-faux-leather-jacket-in-brown/23879362-4?$n_750w$&amp;wid=750&amp;fit=constrain"
-                                data-large_image_width="0"
-                                data-large_image_height="0"
-                                data-skip-lazy="1"
-                                data-no-lazy="1"
-                              />
-                            </a>
-                          </div>
-
-                          <div
                             style={{
                               width: "100%",
+                              height: "100%",
                               display: "flex",
-                              backgroundColor: "#EBEBEB",
                             }}
                           >
-                            <div
-                              style={{
-                                width: "50%",
-                                textAlign: "center",
-                                padding: "7px 0px",
-                              }}
-                            >
-                              <i class="fa fa-play" aria-hidden="true"></i>
-                              Video
+                            <div style={{ width: "10%", height: "100%" }}>
+                              <Dots
+                                number={Slides.thumbnails.length}
+                                thumbnails={Slides.thumbnails}
+                                value={value}
+                                onChange={onchange}
+                                number={Slides.slides.length}
+                              />
                             </div>
-                            <div
-                              style={{
-                                width: "50%",
-                                textAlign: "center",
-                                padding: "7px 0px",
-                              }}
-                            >
-                              <i class="fa fa-star" aria-hidden="true"></i>
-                              <i class="fa fa-star" aria-hidden="true"></i>
-                              <i class="fa fa-star" aria-hidden="true"></i>
-                              <i class="fa fa-star" aria-hidden="true"></i>
-                              <i class="fa fa-star" aria-hidden="true"></i>
-                              (3 Ratings)
+                            <div style={{ width: "90%", height: "100%" }}>
+                              <Carousel
+                                plugins={[
+                                  "infinite",
+                                  {
+                                    resolve: slidesToShowPlugin,
+                                    options: {
+                                      numberOfSlides: 2,
+                                    },
+                                  },
+                                ]}
+                                breakpoints={{
+                                  640: {
+                                    plugins: [
+                                      {
+                                        resolve: slidesToShowPlugin,
+                                        options: {
+                                          numberOfSlides: 1,
+                                        },
+                                      },
+                                    ],
+                                  },
+                                  900: {
+                                    plugins: [
+                                      {
+                                        resolve: slidesToShowPlugin,
+                                        options: {
+                                          numberOfSlides: 2,
+                                        },
+                                      },
+                                    ],
+                                  },
+                                }}
+                                value={value}
+                                slides={Slides.slides}
+                                onChange={onchange}
+                              />
                             </div>
                           </div>
                         </figure>
@@ -540,18 +427,55 @@ function product() {
                               </div>
                             </div>
                           </nav>
-                          <div class="rey-productTitle-wrapper">
-                            <div class="rey-brandLink">
-                              <a href="https://ivloo.com/shop/?filter_brand=only">
-                                <span class="__text">Only</span>
-                              </a>
+                          <div
+                            class="rey-productTitle-wrapper"
+                            style={{
+                              display: "flex",
+                              justifyContent: "space-between",
+                              alignItems: "flex-end",
+                            }}
+                          >
+                            <div>
+                              <div class="rey-brandLink">
+                                <a href="https://ivloo.com/shop/?filter_brand=only">
+                                  <span class="__text">Only</span>
+                                </a>
+                              </div>
+                              <h1 class="product_title entry-title">
+                                Only faux leather jacket in brown
+                              </h1>
                             </div>
-                            <h1 class="product_title entry-title">
-                              Only faux leather jacket in brown
-                            </h1>
+
+                            <p class="priceMobile price">
+                              <span
+                                className="oldPrice"
+                                style={{ marginRight: "30px" }}
+                              >
+                                <del>$149.00</del>
+                              </span>
+                              <span class="woocommerce-Price-amount amount">
+                                <bdi>
+                                  <span class="woocommerce-Price-currencySymbol">
+                                    $
+                                  </span>
+                                  87.00
+                                </bdi>
+                              </span>
+                              <span
+                                className="savedivmobile"
+                                style={{
+                                  marginLeft: "50px",
+                                  backgroundColor: "black",
+                                  color: "white",
+                                  padding: "8px",
+                                }}
+                              >
+                                <span>Save 20%</span>
+                              </span>
+                            </p>
                           </div>
 
-                          <div class="woocommerce-product-rating">
+                          <div class="woocommerce-product-rating d-none d-sm-block">
                             <div
                               class="star-rating"
                               role="img"
@@ -617,6 +541,7 @@ function product() {
                                 customer ratings
                               </span>
                             </div>
+
                             <a
                               href="#reviews"
                               class="woocommerce-review-link"
@@ -626,7 +551,10 @@ function product() {
                             </a>
                           </div>
                           <p class="price">
-                            <span style={{ marginRight: "30px" }}>
+                            <span
+                              className="oldPrice"
+                              style={{ marginRight: "30px" }}
+                            >
                               <del>$149.00</del>
                             </span>
                             <span class="woocommerce-Price-amount amount">
@@ -638,6 +566,7 @@ function product() {
                               </bdi>
                             </span>
                             <span
+                              className="savediv"
                               style={{
                                 marginLeft: "50px",
                                 backgroundColor: "black",
@@ -660,8 +589,8 @@ function product() {
                           >
                             <table class="variations" cellspacing="0">
                               <tbody>
-                                <tr>
-                                  <td class="label">
+                                <tr className="size_div">
+                                  <td class="label size_div">
                                     <label for="pa_size">Size</label>
                                     <span
                                       class="woo-selected-variation-item-name"
@@ -670,6 +599,7 @@ function product() {
                                       : EU 34 - EU34{" "}
                                     </span>
                                   </td>
+                                  <td>{DropdownSizes()}</td>
                                   <td class="value woo-variation-items-wrapper">
                                     <select
                                       id="pa_size"
@@ -691,7 +621,7 @@ function product() {
                                     <ul
                                       role="radiogroup"
                                       aria-label="Size"
-                                      class="variable-items-wrapper button-variable-wrapper"
+                                      class="variable-items-wrapper button-variable-wrapper sizesOn_mobile"
                                       data-attribute_name="attribute_pa_size"
                                       data-attribute_values='["eu-34-eu34","eu-36-eu36","eu-38-eu38","eu-40-eu40","eu-42-eu42","eu-44-eu44"]'
                                     >
@@ -712,87 +642,114 @@ function product() {
                                         </div>
                                       </li>
                                       <li
-                                        aria-checked="false"
-                                        data-wvstooltip="EU 36 - EU36"
-                                        class="variable-item button-variable-item button-variable-item-eu-36-eu36 disabled"
-                                        title=" EU 36 - EU36 "
-                                        data-title=" EU 36 - EU36 "
-                                        data-value="eu-36-eu36"
+                                        aria-checked="true"
+                                        data-wvstooltip="EU 34 - EU34"
+                                        class="variable-item button-variable-item button-variable-item-eu-34-eu34 selected"
+                                        title="EU 34 - EU34 "
+                                        data-title="EU 34 - EU34 "
+                                        data-value="eu-34-eu34"
                                         role="radio"
-                                        tabindex="-1"
+                                        tabindex="0"
                                       >
                                         <div class="variable-item-contents">
                                           <span class="variable-item-span variable-item-span-button">
-                                            {" "}
-                                            EU 36 - EU36{" "}
+                                            EU 34 - EU34{" "}
                                           </span>
                                         </div>
                                       </li>
                                       <li
-                                        aria-checked="false"
-                                        data-wvstooltip="EU 38 - EU38"
-                                        class="variable-item button-variable-item button-variable-item-eu-38-eu38 disabled"
-                                        title=" EU 38 - EU38 "
-                                        data-title=" EU 38 - EU38 "
-                                        data-value="eu-38-eu38"
+                                        aria-checked="true"
+                                        data-wvstooltip="EU 34 - EU34"
+                                        class="variable-item button-variable-item button-variable-item-eu-34-eu34 selected"
+                                        title="EU 34 - EU34 "
+                                        data-title="EU 34 - EU34 "
+                                        data-value="eu-34-eu34"
                                         role="radio"
-                                        tabindex="-1"
+                                        tabindex="0"
                                       >
                                         <div class="variable-item-contents">
                                           <span class="variable-item-span variable-item-span-button">
-                                            {" "}
-                                            EU 38 - EU38{" "}
+                                            EU 34 - EU34{" "}
                                           </span>
                                         </div>
                                       </li>
                                       <li
-                                        aria-checked="false"
-                                        data-wvstooltip="EU 40 - EU40"
-                                        class="variable-item button-variable-item button-variable-item-eu-40-eu40 disabled"
-                                        title=" EU 40 - EU40 "
-                                        data-title=" EU 40 - EU40 "
-                                        data-value="eu-40-eu40"
+                                        aria-checked="true"
+                                        data-wvstooltip="EU 34 - EU34"
+                                        class="variable-item button-variable-item button-variable-item-eu-34-eu34 selected"
+                                        title="EU 34 - EU34 "
+                                        data-title="EU 34 - EU34 "
+                                        data-value="eu-34-eu34"
                                         role="radio"
-                                        tabindex="-1"
+                                        tabindex="0"
                                       >
                                         <div class="variable-item-contents">
                                           <span class="variable-item-span variable-item-span-button">
-                                            {" "}
-                                            EU 40 - EU40{" "}
+                                            EU 34 - EU34{" "}
                                           </span>
                                         </div>
                                       </li>
                                       <li
-                                        aria-checked="false"
-                                        data-wvstooltip="EU 42 - EU42"
-                                        class="variable-item button-variable-item button-variable-item-eu-42-eu42 disabled"
-                                        title=" EU 42 - EU42 "
-                                        data-title=" EU 42 - EU42 "
-                                        data-value="eu-42-eu42"
+                                        aria-checked="true"
+                                        data-wvstooltip="EU 34 - EU34"
+                                        class="variable-item button-variable-item button-variable-item-eu-34-eu34 selected"
+                                        title="EU 34 - EU34 "
+                                        data-title="EU 34 - EU34 "
+                                        data-value="eu-34-eu34"
                                         role="radio"
-                                        tabindex="-1"
+                                        tabindex="0"
                                       >
                                         <div class="variable-item-contents">
                                           <span class="variable-item-span variable-item-span-button">
-                                            {" "}
-                                            EU 42 - EU42{" "}
+                                            EU 34 - EU34{" "}
                                           </span>
                                         </div>
                                       </li>
                                       <li
-                                        aria-checked="false"
-                                        data-wvstooltip="EU 44 - EU44"
-                                        class="variable-item button-variable-item button-variable-item-eu-44-eu44 disabled"
-                                        title=" EU 44 - EU44"
-                                        data-title=" EU 44 - EU44"
-                                        data-value="eu-44-eu44"
+                                        aria-checked="true"
+                                        data-wvstooltip="EU 34 - EU34"
+                                        class="variable-item button-variable-item button-variable-item-eu-34-eu34 selected"
+                                        title="EU 34 - EU34 "
+                                        data-title="EU 34 - EU34 "
+                                        data-value="eu-34-eu34"
                                         role="radio"
-                                        tabindex="-1"
+                                        tabindex="0"
                                       >
                                         <div class="variable-item-contents">
                                           <span class="variable-item-span variable-item-span-button">
-                                            {" "}
-                                            EU 44 - EU44
+                                            EU 34 - EU34{" "}
+                                          </span>
+                                        </div>
+                                      </li>
+                                      <li
+                                        aria-checked="true"
+                                        data-wvstooltip="EU 34 - EU34"
+                                        class="variable-item button-variable-item button-variable-item-eu-34-eu34 selected"
+                                        title="EU 34 - EU34 "
+                                        data-title="EU 34 - EU34 "
+                                        data-value="eu-34-eu34"
+                                        role="radio"
+                                        tabindex="0"
+                                      >
+                                        <div class="variable-item-contents">
+                                          <span class="variable-item-span variable-item-span-button">
+                                            EU 34 - EU34{" "}
+                                          </span>
+                                        </div>
+                                      </li>
+                                      <li
+                                        aria-checked="true"
+                                        data-wvstooltip="EU 34 - EU34"
+                                        class="variable-item button-variable-item button-variable-item-eu-34-eu34 selected"
+                                        title="EU 34 - EU34 "
+                                        data-title="EU 34 - EU34 "
+                                        data-value="eu-34-eu34"
+                                        role="radio"
+                                        tabindex="0"
+                                      >
+                                        <div class="variable-item-contents">
+                                          <span class="variable-item-span variable-item-span-button">
+                                            EU 34 - EU34{" "}
                                           </span>
                                         </div>
                                       </li>
@@ -867,7 +824,10 @@ function product() {
                               <div class="woocommerce-variation single_variation"></div>
                               <div class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-enabled">
                                 <div class="rey-cartBtnQty --atc-normal-hover --style-basic --stretch">
-                                  <div class="quantity">
+                                  <div class="quantity quantityMobile">
+                                    <div className="cartBtnQty-controls2">
+                                      {DropdownSizesOnMobile()}
+                                    </div>
                                     <div class="rey-qtyField cartBtnQty-controls">
                                       <span class="cartBtnQty-control --minus">
                                         <svg
@@ -923,11 +883,10 @@ function product() {
                                       aria-label="Add to wishlist"
                                       data-rey-tooltip='{"text":"Add to wishlist","class":"--basic","fixed":true}'
                                     >
-                                      <svg
-                                        class="rey-icon rey-icon-reycore-icon-heart rey-wishlistBtn-icon"
+                                      <i
+                                        class="fa fa-heart-o"
                                         aria-hidden="true"
-                                        role="img"
-                                      ></svg>
+                                      ></i>
                                     </a>
                                   </div>
                                 </div>
@@ -1195,12 +1154,93 @@ function product() {
                     <div class="rey-wcPanels --no-description ">
                       <div class="rey-wcPanel rey-wcPanel--reviews rey-wcPanel--ord-1">
                         <div
-                          class="rey-reviewsBtn js-toggle-target btn btn-secondary-outline btn--block"
+                          class="rey-reviewsBtn js-toggle-target btn btn-secondary-outline btn--block Accordion_on_desktop"
                           data-target=".rey-wcPanel--reviews #reviews"
                           role="button"
+                          style={{ padding: "0px" }}
                         >
-                          <span>Reviews (20)</span>
+                          <Accordion styled>
+                            <Accordion.Title
+                              active={activeIndex === 0}
+                              index={0}
+                              onClick={handleClick}
+                            >
+                              Reviews (20)
+                            </Accordion.Title>
+                            <Accordion.Content active={activeIndex === 0}>
+                              <p>
+                                A dog is a type of domesticated animal. Known
+                                for its loyalty and faithfulness, it can be
+                                found as a welcome guest in many households
+                                across the world.
+                              </p>
+                            </Accordion.Content>
+                          </Accordion>
                         </div>
+                        <div className="Accordion_on_mobile">
+                          <Accordion fluid styled>
+                            <Accordion.Title
+                              active={activeIndexMobile === 0}
+                              index={0}
+                              onClick={handleClickOnMobile}
+                            >
+                              <Icon name="dropdown" />
+                              What is a dog?
+                            </Accordion.Title>
+                            <Accordion.Content active={activeIndexMobile === 0}>
+                              <p>
+                                A dog is a type of domesticated animal. Known
+                                for its loyalty and faithfulness, it can be
+                                found as a welcome guest in many households
+                                across the world.
+                              </p>
+                            </Accordion.Content>
+
+                            <Accordion.Title
+                              active={activeIndexMobile === 1}
+                              index={1}
+                              onClick={handleClickOnMobile}
+                            >
+                              <Icon name="dropdown" />
+                              What kinds of dogs are there?
+                            </Accordion.Title>
+                            <Accordion.Content active={activeIndexMobile === 1}>
+                              <p>
+                                There are many breeds of dogs. Each breed varies
+                                in size and temperament. Owners often select a
+                                breed of dog that they find to be compatible
+                                with their own lifestyle and desires from a
+                                companion.
+                              </p>
+                            </Accordion.Content>
+
+                            <Accordion.Title
+                              active={activeIndexMobile === 2}
+                              index={2}
+                              onClick={handleClickOnMobile}
+                            >
+                              <Icon name="dropdown" />
+                              How do you acquire a dog?
+                            </Accordion.Title>
+                            <Accordion.Content active={activeIndexMobile === 2}>
+                              <p>
+                                Three common ways for a prospective owner to
+                                acquire a dog is from pet shops, private owners,
+                                or shelters.
+                              </p>
+                              <p>
+                                A pet shop may be the most convenient way to buy
+                                a dog. Buying a dog from a private owner allows
+                                you to assess the pedigree and upbringing of
+                                your dog before choosing to take it home.
+                                Lastly, finding your dog from a shelter, helps
+                                give a good home to a dog who may not find one
+                                so readily.
+                              </p>
+                            </Accordion.Content>
+                          </Accordion>
+                        </div>
+
                         <div class="rey-wcPanel-inner">
                           <div
                             id="reviews"
@@ -2540,6 +2580,7 @@ function product() {
                                     (3 Ratings)
                                   </div>
                                 </div>
+
                                 <div class="rey-brandLink">
                                   <a href="https://ivloo.com/shop/?filter_brand=only">
                                     Only
@@ -2601,11 +2642,10 @@ function product() {
                                         aria-label="Add to wishlist"
                                         data-rey-tooltip='{"text":"Add to wishlist","class":"--basic","fixed":true}'
                                       >
-                                        <svg
-                                          class="rey-icon rey-icon-reycore-icon-heart rey-wishlistBtn-icon"
+                                        <i
+                                          class="fa fa-heart-o"
                                           aria-hidden="true"
-                                          role="img"
-                                        ></svg>
+                                        ></i>
                                       </a>
                                     </div>
                                   </div>
@@ -2686,6 +2726,7 @@ function product() {
                                     (3 Ratings)
                                   </div>
                                 </div>
+
                                 <div class="rey-brandLink">
                                   <a href="https://ivloo.com/shop/?filter_brand=bershka">
                                     Bershka
@@ -2747,11 +2788,10 @@ function product() {
                                         aria-label="Add to wishlist"
                                         data-rey-tooltip='{"text":"Add to wishlist","class":"--basic","fixed":true}'
                                       >
-                                        <svg
-                                          class="rey-icon rey-icon-reycore-icon-heart rey-wishlistBtn-icon"
+                                        <i
+                                          class="fa fa-heart-o"
                                           aria-hidden="true"
-                                          role="img"
-                                        ></svg>
+                                        ></i>
                                       </a>
                                     </div>
                                   </div>
@@ -2759,40 +2799,91 @@ function product() {
                               </div>
                             </li>
                             <li
-                              class="product is-animated rey-wc-skin--basic --customImageContainerHeight rey-wc-loopAlign-left --extraImg-no --extraImg-mobile --uncropped type-product post-1172616 status-publish instock product_cat-jackets-coats-jackets has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes splide__slide is-visible"
-                              data-pid="1172616"
-                              id="splide01-slide03"
+                              class="product is-animated rey-wc-skin--basic --customImageContainerHeight rey-wc-loopAlign-left --extraImg-no --extraImg-mobile --uncropped type-product post-1172703 status-publish first instock product_cat-jackets-coats-jackets has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes splide__slide is-active is-visible"
+                              data-pid="1172703"
+                              id="splide01-slide01"
                               style={{ marginRight: "30px", width: "296.25px" }}
                               aria-hidden="false"
                               tabindex="0"
                             >
-                              <div class="rey-productInner" data-id="1172616">
+                              <div class="rey-productInner" data-id="1172703">
                                 <div class="rey-productThumbnail">
                                   <a
-                                    href="https://ivloo.com/FredPerryborgbomberjacketinblack-201029084/"
+                                    href="https://ivloo.com/Onlyfauxleatherjacket-9158369/"
                                     class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
                                   >
                                     <img
                                       width="1"
                                       height="1"
-                                      src="https://images.asos-media.com/products/fred-perry-borg-bomber-jacket-in-black/201029084-1-black?$n_750w$&amp;wid=750&amp;fit=constrain"
+                                      src="https://images.asos-media.com/products/only-faux-leather-jacket/9158369-1-black?$n_750w$&amp;wid=750&amp;fit=constrain"
                                       class="rey-thumbImg img--1 attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                                       alt=""
                                       loading="lazy"
                                     />
                                   </a>{" "}
                                 </div>
+                                <div
+                                  style={{
+                                    width: "100%",
+                                    display: "flex",
+                                    backgroundColor: "#EBEBEB",
+                                  }}
+                                >
+                                  <div
+                                    style={{
+                                      width: "50%",
+                                      textAlign: "center",
+                                      padding: "7px 0px",
+                                    }}
+                                  >
+                                    <i
+                                      class="fa fa-play"
+                                      aria-hidden="true"
+                                    ></i>
+                                    Video
+                                  </div>
+                                  <div
+                                    style={{
+                                      width: "50%",
+                                      textAlign: "center",
+                                      padding: "7px 0px",
+                                    }}
+                                  >
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    (3 Ratings)
+                                  </div>
+                                </div>
+
                                 <div class="rey-brandLink">
-                                  <a href="https://ivloo.com/shop/?filter_brand=fred-perry">
-                                    Fred Perry
+                                  <a href="https://ivloo.com/shop/?filter_brand=only">
+                                    Only
                                   </a>
                                 </div>
                                 <h2
                                   class="woocommerce-loop-product__title"
                                   style={{ minHeight: "21px" }}
                                 >
-                                  <a href="https://ivloo.com/FredPerryborgbomberjacketinblack-201029084/">
-                                    Fred Perry borg bomber jacket in black
+                                  <a href="https://ivloo.com/Onlyfauxleatherjacket-9158369/">
+                                    Only faux leather jacket
                                   </a>
                                 </h2>
                                 <div class="rey-productLoop-footer">
@@ -2802,19 +2893,19 @@ function product() {
                                         <span class="woocommerce-Price-currencySymbol">
                                           $
                                         </span>
-                                        268.00
+                                        87.00
                                       </bdi>
                                     </span>
                                   </span>
                                   <div class="rey-productFooter-item rey-productFooter-item--addtocart">
                                     <div class="rey-productFooter-inner">
                                       <a
-                                        href="https://ivloo.com/FredPerryborgbomberjacketinblack-201029084/"
+                                        href="https://ivloo.com/Onlyfauxleatherjacket-9158369/"
                                         data-quantity="1"
                                         class="button product_type_variable add_to_cart_button rey-btn--clean"
-                                        data-product_id="1172616"
-                                        data-product_sku="201029084"
-                                        aria-label="Select options for “Fred Perry borg bomber jacket in black”"
+                                        data-product_id="1172703"
+                                        data-product_sku="9158369"
+                                        aria-label="Select options for “Only faux leather jacket”"
                                         rel="nofollow"
                                       >
                                         <span class="__text">Add to cart</span>
@@ -2825,9 +2916,9 @@ function product() {
                                   <div class="rey-productFooter-item rey-productFooter-item--quickview">
                                     <div class="rey-productFooter-inner">
                                       <a
-                                        href="https://ivloo.com/FredPerryborgbomberjacketinblack-201029084/"
+                                        href="https://ivloo.com/Onlyfauxleatherjacket-9158369/"
                                         class="button rey-btn--clean rey-quickviewBtn js-rey-quickviewBtn"
-                                        data-id="1172616"
+                                        data-id="1172703"
                                         title="QUICKVIEW"
                                       >
                                         QUICKVIEW
@@ -2837,17 +2928,16 @@ function product() {
                                   <div class="rey-productFooter-item rey-productFooter-item--wishlist">
                                     <div class="rey-productFooter-inner">
                                       <a
-                                        href="https://ivloo.com/FredPerryborgbomberjacketinblack-201029084/"
+                                        href="https://ivloo.com/Onlyfauxleatherjacket-9158369/"
                                         class="--show-mobile--top rey-wishlistBtn rey-wishlistBtn-link"
-                                        data-id="1172616"
+                                        data-id="1172703"
                                         aria-label="Add to wishlist"
                                         data-rey-tooltip='{"text":"Add to wishlist","class":"--basic","fixed":true}'
                                       >
-                                        <svg
-                                          class="rey-icon rey-icon-reycore-icon-heart rey-wishlistBtn-icon"
+                                        <i
+                                          class="fa fa-heart-o"
                                           aria-hidden="true"
-                                          role="img"
-                                        ></svg>
+                                        ></i>
                                       </a>
                                     </div>
                                   </div>
@@ -2855,41 +2945,91 @@ function product() {
                               </div>
                             </li>
                             <li
-                              class="product is-animated rey-wc-skin--basic --customImageContainerHeight rey-wc-loopAlign-left --extraImg-no --extraImg-mobile --uncropped type-product post-1172817 status-publish last instock product_cat-jackets-coats-jackets has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes splide__slide is-visible"
-                              data-pid="1172817"
-                              id="splide01-slide04"
+                              class="product is-animated rey-wc-skin--basic --customImageContainerHeight rey-wc-loopAlign-left --extraImg-no --extraImg-mobile --uncropped type-product post-1172893 status-publish instock product_cat-jackets-coats-jackets has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes splide__slide is-visible"
+                              data-pid="1172893"
+                              id="splide01-slide02"
                               style={{ marginRight: "30px", width: "296.25px" }}
                               aria-hidden="false"
                               tabindex="0"
                             >
-                              <div class="rey-productInner" data-id="1172817">
+                              <div class="rey-productInner" data-id="1172893">
                                 <div class="rey-productThumbnail">
                                   <a
-                                    href="https://ivloo.com/IVLOODESIGNCurvecottonshacketinlightkhaki-200407184/"
+                                    href="https://ivloo.com/Bershkacroppedpufferjacketinbrown-200955026/"
                                     class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
                                   >
                                     <img
                                       width="1"
                                       height="1"
-                                      src="https://images.asos-media.com/products/asos-design-curve-cotton-shacket-in-light-khaki/200407184-1-lightkhaki?$n_750w$&amp;wid=750&amp;fit=constrain"
+                                      src="https://images.asos-media.com/products/bershka-cropped-puffer-jacket-in-brown/200955026-1-brown?$n_750w$&amp;wid=750&amp;fit=constrain"
                                       class="rey-thumbImg img--1 attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                                       alt=""
                                       loading="lazy"
                                     />
                                   </a>{" "}
                                 </div>
+                                <div
+                                  style={{
+                                    width: "100%",
+                                    display: "flex",
+                                    backgroundColor: "#EBEBEB",
+                                  }}
+                                >
+                                  <div
+                                    style={{
+                                      width: "50%",
+                                      textAlign: "center",
+                                      padding: "7px 0px",
+                                    }}
+                                  >
+                                    <i
+                                      class="fa fa-play"
+                                      aria-hidden="true"
+                                    ></i>
+                                    Video
+                                  </div>
+                                  <div
+                                    style={{
+                                      width: "50%",
+                                      textAlign: "center",
+                                      padding: "7px 0px",
+                                    }}
+                                  >
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    (3 Ratings)
+                                  </div>
+                                </div>
+
                                 <div class="rey-brandLink">
-                                  <a href="https://ivloo.com/shop/?filter_brand=asos-curve">
-                                    ASOS Curve
+                                  <a href="https://ivloo.com/shop/?filter_brand=bershka">
+                                    Bershka
                                   </a>
                                 </div>
                                 <h2
                                   class="woocommerce-loop-product__title"
                                   style={{ minHeight: "21px" }}
                                 >
-                                  <a href="https://ivloo.com/IVLOODESIGNCurvecottonshacketinlightkhaki-200407184/">
-                                    IVLOO DESIGN Curve cotton shacket in light
-                                    khaki
+                                  <a href="https://ivloo.com/Bershkacroppedpufferjacketinbrown-200955026/">
+                                    Bershka cropped puffer jacket in brown
                                   </a>
                                 </h2>
                                 <div class="rey-productLoop-footer">
@@ -2906,12 +3046,12 @@ function product() {
                                   <div class="rey-productFooter-item rey-productFooter-item--addtocart">
                                     <div class="rey-productFooter-inner">
                                       <a
-                                        href="https://ivloo.com/IVLOODESIGNCurvecottonshacketinlightkhaki-200407184/"
+                                        href="https://ivloo.com/Bershkacroppedpufferjacketinbrown-200955026/"
                                         data-quantity="1"
                                         class="button product_type_variable add_to_cart_button rey-btn--clean"
-                                        data-product_id="1172817"
-                                        data-product_sku="200407184"
-                                        aria-label="Select options for “IVLOO DESIGN Curve cotton shacket in light khaki”"
+                                        data-product_id="1172893"
+                                        data-product_sku="200955026"
+                                        aria-label="Select options for “Bershka cropped puffer jacket in brown”"
                                         rel="nofollow"
                                       >
                                         <span class="__text">Add to cart</span>
@@ -2922,9 +3062,9 @@ function product() {
                                   <div class="rey-productFooter-item rey-productFooter-item--quickview">
                                     <div class="rey-productFooter-inner">
                                       <a
-                                        href="https://ivloo.com/IVLOODESIGNCurvecottonshacketinlightkhaki-200407184/"
+                                        href="https://ivloo.com/Bershkacroppedpufferjacketinbrown-200955026/"
                                         class="button rey-btn--clean rey-quickviewBtn js-rey-quickviewBtn"
-                                        data-id="1172817"
+                                        data-id="1172893"
                                         title="QUICKVIEW"
                                       >
                                         QUICKVIEW
@@ -2934,17 +3074,16 @@ function product() {
                                   <div class="rey-productFooter-item rey-productFooter-item--wishlist">
                                     <div class="rey-productFooter-inner">
                                       <a
-                                        href="https://ivloo.com/IVLOODESIGNCurvecottonshacketinlightkhaki-200407184/"
+                                        href="https://ivloo.com/Bershkacroppedpufferjacketinbrown-200955026/"
                                         class="--show-mobile--top rey-wishlistBtn rey-wishlistBtn-link"
-                                        data-id="1172817"
+                                        data-id="1172893"
                                         aria-label="Add to wishlist"
                                         data-rey-tooltip='{"text":"Add to wishlist","class":"--basic","fixed":true}'
                                       >
-                                        <svg
-                                          class="rey-icon rey-icon-reycore-icon-heart rey-wishlistBtn-icon"
+                                        <i
+                                          class="fa fa-heart-o"
                                           aria-hidden="true"
-                                          role="img"
-                                        ></svg>
+                                        ></i>
                                       </a>
                                     </div>
                                   </div>
@@ -2952,40 +3091,91 @@ function product() {
                               </div>
                             </li>
                             <li
-                              class="product is-animated rey-wc-skin--basic --customImageContainerHeight rey-wc-loopAlign-left --extraImg-no --extraImg-mobile --uncropped type-product post-1172772 status-publish first instock product_cat-jackets-coats-jackets has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes splide__slide"
-                              data-pid="1172772"
-                              id="splide01-slide05"
+                              class="product is-animated rey-wc-skin--basic --customImageContainerHeight rey-wc-loopAlign-left --extraImg-no --extraImg-mobile --uncropped type-product post-1172703 status-publish first instock product_cat-jackets-coats-jackets has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes splide__slide is-active is-visible"
+                              data-pid="1172703"
+                              id="splide01-slide01"
                               style={{ marginRight: "30px", width: "296.25px" }}
-                              aria-hidden="true"
-                              tabindex="-1"
+                              aria-hidden="false"
+                              tabindex="0"
                             >
-                              <div class="rey-productInner" data-id="1172772">
+                              <div class="rey-productInner" data-id="1172703">
                                 <div class="rey-productThumbnail">
                                   <a
-                                    href="https://ivloo.com/Varleybalfernpaddedjacketinoffwhite-200790823/"
+                                    href="https://ivloo.com/Onlyfauxleatherjacket-9158369/"
                                     class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
                                   >
                                     <img
                                       width="1"
                                       height="1"
-                                      src="https://images.asos-media.com/products/varley-balfern-padded-jacket-in-off-white/200790823-1-neutral?$n_750w$&amp;wid=750&amp;fit=constrain"
+                                      src="https://images.asos-media.com/products/only-faux-leather-jacket/9158369-1-black?$n_750w$&amp;wid=750&amp;fit=constrain"
                                       class="rey-thumbImg img--1 attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                                       alt=""
                                       loading="lazy"
                                     />
                                   </a>{" "}
                                 </div>
+                                <div
+                                  style={{
+                                    width: "100%",
+                                    display: "flex",
+                                    backgroundColor: "#EBEBEB",
+                                  }}
+                                >
+                                  <div
+                                    style={{
+                                      width: "50%",
+                                      textAlign: "center",
+                                      padding: "7px 0px",
+                                    }}
+                                  >
+                                    <i
+                                      class="fa fa-play"
+                                      aria-hidden="true"
+                                    ></i>
+                                    Video
+                                  </div>
+                                  <div
+                                    style={{
+                                      width: "50%",
+                                      textAlign: "center",
+                                      padding: "7px 0px",
+                                    }}
+                                  >
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    (3 Ratings)
+                                  </div>
+                                </div>
+
                                 <div class="rey-brandLink">
-                                  <a href="https://ivloo.com/shop/?filter_brand=varley">
-                                    Varley
+                                  <a href="https://ivloo.com/shop/?filter_brand=only">
+                                    Only
                                   </a>
                                 </div>
                                 <h2
                                   class="woocommerce-loop-product__title"
                                   style={{ minHeight: "21px" }}
                                 >
-                                  <a href="https://ivloo.com/Varleybalfernpaddedjacketinoffwhite-200790823/">
-                                    Varley balfern padded jacket in off white
+                                  <a href="https://ivloo.com/Onlyfauxleatherjacket-9158369/">
+                                    Only faux leather jacket
                                   </a>
                                 </h2>
                                 <div class="rey-productLoop-footer">
@@ -2995,19 +3185,19 @@ function product() {
                                         <span class="woocommerce-Price-currencySymbol">
                                           $
                                         </span>
-                                        328.00
+                                        87.00
                                       </bdi>
                                     </span>
                                   </span>
                                   <div class="rey-productFooter-item rey-productFooter-item--addtocart">
                                     <div class="rey-productFooter-inner">
                                       <a
-                                        href="https://ivloo.com/Varleybalfernpaddedjacketinoffwhite-200790823/"
+                                        href="https://ivloo.com/Onlyfauxleatherjacket-9158369/"
                                         data-quantity="1"
                                         class="button product_type_variable add_to_cart_button rey-btn--clean"
-                                        data-product_id="1172772"
-                                        data-product_sku="200790823"
-                                        aria-label="Select options for “Varley balfern padded jacket in off white”"
+                                        data-product_id="1172703"
+                                        data-product_sku="9158369"
+                                        aria-label="Select options for “Only faux leather jacket”"
                                         rel="nofollow"
                                       >
                                         <span class="__text">Add to cart</span>
@@ -3018,9 +3208,9 @@ function product() {
                                   <div class="rey-productFooter-item rey-productFooter-item--quickview">
                                     <div class="rey-productFooter-inner">
                                       <a
-                                        href="https://ivloo.com/Varleybalfernpaddedjacketinoffwhite-200790823/"
+                                        href="https://ivloo.com/Onlyfauxleatherjacket-9158369/"
                                         class="button rey-btn--clean rey-quickviewBtn js-rey-quickviewBtn"
-                                        data-id="1172772"
+                                        data-id="1172703"
                                         title="QUICKVIEW"
                                       >
                                         QUICKVIEW
@@ -3030,17 +3220,16 @@ function product() {
                                   <div class="rey-productFooter-item rey-productFooter-item--wishlist">
                                     <div class="rey-productFooter-inner">
                                       <a
-                                        href="https://ivloo.com/Varleybalfernpaddedjacketinoffwhite-200790823/"
+                                        href="https://ivloo.com/Onlyfauxleatherjacket-9158369/"
                                         class="--show-mobile--top rey-wishlistBtn rey-wishlistBtn-link"
-                                        data-id="1172772"
+                                        data-id="1172703"
                                         aria-label="Add to wishlist"
                                         data-rey-tooltip='{"text":"Add to wishlist","class":"--basic","fixed":true}'
                                       >
-                                        <svg
-                                          class="rey-icon rey-icon-reycore-icon-heart rey-wishlistBtn-icon"
+                                        <i
+                                          class="fa fa-heart-o"
                                           aria-hidden="true"
-                                          role="img"
-                                        ></svg>
+                                        ></i>
                                       </a>
                                     </div>
                                   </div>
@@ -3048,126 +3237,80 @@ function product() {
                               </div>
                             </li>
                             <li
-                              class="product is-animated rey-wc-skin--basic --customImageContainerHeight rey-wc-loopAlign-left --extraImg-no --extraImg-mobile --uncropped type-product post-1172744 status-publish instock product_cat-jackets-coats-jackets has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes splide__slide"
-                              data-pid="1172744"
-                              id="splide01-slide06"
+                              class="product is-animated rey-wc-skin--basic --customImageContainerHeight rey-wc-loopAlign-left --extraImg-no --extraImg-mobile --uncropped type-product post-1172893 status-publish instock product_cat-jackets-coats-jackets has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes splide__slide is-visible"
+                              data-pid="1172893"
+                              id="splide01-slide02"
                               style={{ marginRight: "30px", width: "296.25px" }}
-                              aria-hidden="true"
-                              tabindex="-1"
+                              aria-hidden="false"
+                              tabindex="0"
                             >
-                              <div class="rey-productInner" data-id="1172744">
+                              <div class="rey-productInner" data-id="1172893">
                                 <div class="rey-productThumbnail">
                                   <a
-                                    href="https://ivloo.com/IVLOODESIGNpaddedjacketwithfauxfurhoodinsage-200354919/"
+                                    href="https://ivloo.com/Bershkacroppedpufferjacketinbrown-200955026/"
                                     class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
                                   >
                                     <img
                                       width="1"
                                       height="1"
-                                      src="https://images.asos-media.com/products/topshop-padded-jacket-with-faux-fur-hood-in-sage/200354919-1-sage?$n_750w$&amp;wid=750&amp;fit=constrain"
+                                      src="https://images.asos-media.com/products/bershka-cropped-puffer-jacket-in-brown/200955026-1-brown?$n_750w$&amp;wid=750&amp;fit=constrain"
                                       class="rey-thumbImg img--1 attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                                       alt=""
                                       loading="lazy"
                                     />
                                   </a>{" "}
                                 </div>
-                                <div class="rey-brandLink">
-                                  <a href="https://ivloo.com/shop/?filter_brand=topshop">
-                                    Topshop
-                                  </a>
-                                </div>
-                                <h2
-                                  class="woocommerce-loop-product__title"
-                                  style={{ minHeight: "21px" }}
+                                <div
+                                  style={{
+                                    width: "100%",
+                                    display: "flex",
+                                    backgroundColor: "#EBEBEB",
+                                  }}
                                 >
-                                  <a href="https://ivloo.com/IVLOODESIGNpaddedjacketwithfauxfurhoodinsage-200354919/">
-                                    IVLOO DESIGN padded jacket with faux fur
-                                    hood in sage
-                                  </a>
-                                </h2>
-                                <div class="rey-productLoop-footer">
-                                  <span class="price rey-loopPrice">
-                                    <span class="woocommerce-Price-amount amount">
-                                      <bdi>
-                                        <span class="woocommerce-Price-currencySymbol">
-                                          $
-                                        </span>
-                                        120.00
-                                      </bdi>
-                                    </span>
-                                  </span>
-                                  <div class="rey-productFooter-item rey-productFooter-item--addtocart">
-                                    <div class="rey-productFooter-inner">
-                                      <a
-                                        href="https://ivloo.com/IVLOODESIGNpaddedjacketwithfauxfurhoodinsage-200354919/"
-                                        data-quantity="1"
-                                        class="button product_type_variable add_to_cart_button rey-btn--clean"
-                                        data-product_id="1172744"
-                                        data-product_sku="200354919"
-                                        aria-label="Select options for “IVLOO DESIGN padded jacket with faux fur hood in sage”"
-                                        rel="nofollow"
-                                      >
-                                        <span class="__text">Add to cart</span>
-                                        <span class="rey-lineLoader __ajax-preloader"></span>
-                                      </a>
-                                    </div>
-                                  </div>
-                                  <div class="rey-productFooter-item rey-productFooter-item--quickview">
-                                    <div class="rey-productFooter-inner">
-                                      <a
-                                        href="https://ivloo.com/IVLOODESIGNpaddedjacketwithfauxfurhoodinsage-200354919/"
-                                        class="button rey-btn--clean rey-quickviewBtn js-rey-quickviewBtn"
-                                        data-id="1172744"
-                                        title="QUICKVIEW"
-                                      >
-                                        QUICKVIEW
-                                      </a>
-                                    </div>
-                                  </div>
-                                  <div class="rey-productFooter-item rey-productFooter-item--wishlist">
-                                    <div class="rey-productFooter-inner">
-                                      <a
-                                        href="https://ivloo.com/IVLOODESIGNpaddedjacketwithfauxfurhoodinsage-200354919/"
-                                        class="--show-mobile--top rey-wishlistBtn rey-wishlistBtn-link"
-                                        data-id="1172744"
-                                        aria-label="Add to wishlist"
-                                        data-rey-tooltip='{"text":"Add to wishlist","class":"--basic","fixed":true}'
-                                      >
-                                        <svg
-                                          class="rey-icon rey-icon-reycore-icon-heart rey-wishlistBtn-icon"
-                                          aria-hidden="true"
-                                          role="img"
-                                        ></svg>
-                                      </a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li
-                              class="product is-animated rey-wc-skin--basic --customImageContainerHeight rey-wc-loopAlign-left --extraImg-no --extraImg-mobile --uncropped type-product post-1172864 status-publish instock product_cat-jackets-coats-jackets has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes splide__slide"
-                              data-pid="1172864"
-                              id="splide01-slide07"
-                              style={{ marginRight: "30px", width: "296.25px" }}
-                              aria-hidden="true"
-                              tabindex="-1"
-                            >
-                              <div class="rey-productInner" data-id="1172864">
-                                <div class="rey-productThumbnail">
-                                  <a
-                                    href="https://ivloo.com/Bershkamixedchecksplicedshacketinbrown-200977791/"
-                                    class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                                  <div
+                                    style={{
+                                      width: "50%",
+                                      textAlign: "center",
+                                      padding: "7px 0px",
+                                    }}
                                   >
-                                    <img
-                                      width="1"
-                                      height="1"
-                                      src="https://images.asos-media.com/products/bershka-mixed-check-spliced-shacket-in-brown/200977791-1-brown?$n_750w$&amp;wid=750&amp;fit=constrain"
-                                      class="rey-thumbImg img--1 attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                      alt=""
-                                      loading="lazy"
-                                    />
-                                  </a>{" "}
+                                    <i
+                                      class="fa fa-play"
+                                      aria-hidden="true"
+                                    ></i>
+                                    Video
+                                  </div>
+                                  <div
+                                    style={{
+                                      width: "50%",
+                                      textAlign: "center",
+                                      padding: "7px 0px",
+                                    }}
+                                  >
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    (3 Ratings)
+                                  </div>
                                 </div>
+
                                 <div class="rey-brandLink">
                                   <a href="https://ivloo.com/shop/?filter_brand=bershka">
                                     Bershka
@@ -3177,8 +3320,8 @@ function product() {
                                   class="woocommerce-loop-product__title"
                                   style={{ minHeight: "21px" }}
                                 >
-                                  <a href="https://ivloo.com/Bershkamixedchecksplicedshacketinbrown-200977791/">
-                                    Bershka mixed check spliced shacket in brown
+                                  <a href="https://ivloo.com/Bershkacroppedpufferjacketinbrown-200955026/">
+                                    Bershka cropped puffer jacket in brown
                                   </a>
                                 </h2>
                                 <div class="rey-productLoop-footer">
@@ -3188,19 +3331,19 @@ function product() {
                                         <span class="woocommerce-Price-currencySymbol">
                                           $
                                         </span>
-                                        88.00
+                                        63.00
                                       </bdi>
                                     </span>
                                   </span>
                                   <div class="rey-productFooter-item rey-productFooter-item--addtocart">
                                     <div class="rey-productFooter-inner">
                                       <a
-                                        href="https://ivloo.com/Bershkamixedchecksplicedshacketinbrown-200977791/"
+                                        href="https://ivloo.com/Bershkacroppedpufferjacketinbrown-200955026/"
                                         data-quantity="1"
                                         class="button product_type_variable add_to_cart_button rey-btn--clean"
-                                        data-product_id="1172864"
-                                        data-product_sku="200977791"
-                                        aria-label="Select options for “Bershka mixed check spliced shacket in brown”"
+                                        data-product_id="1172893"
+                                        data-product_sku="200955026"
+                                        aria-label="Select options for “Bershka cropped puffer jacket in brown”"
                                         rel="nofollow"
                                       >
                                         <span class="__text">Add to cart</span>
@@ -3211,9 +3354,9 @@ function product() {
                                   <div class="rey-productFooter-item rey-productFooter-item--quickview">
                                     <div class="rey-productFooter-inner">
                                       <a
-                                        href="https://ivloo.com/Bershkamixedchecksplicedshacketinbrown-200977791/"
+                                        href="https://ivloo.com/Bershkacroppedpufferjacketinbrown-200955026/"
                                         class="button rey-btn--clean rey-quickviewBtn js-rey-quickviewBtn"
-                                        data-id="1172864"
+                                        data-id="1172893"
                                         title="QUICKVIEW"
                                       >
                                         QUICKVIEW
@@ -3223,17 +3366,16 @@ function product() {
                                   <div class="rey-productFooter-item rey-productFooter-item--wishlist">
                                     <div class="rey-productFooter-inner">
                                       <a
-                                        href="https://ivloo.com/Bershkamixedchecksplicedshacketinbrown-200977791/"
+                                        href="https://ivloo.com/Bershkacroppedpufferjacketinbrown-200955026/"
                                         class="--show-mobile--top rey-wishlistBtn rey-wishlistBtn-link"
-                                        data-id="1172864"
+                                        data-id="1172893"
                                         aria-label="Add to wishlist"
                                         data-rey-tooltip='{"text":"Add to wishlist","class":"--basic","fixed":true}'
                                       >
-                                        <svg
-                                          class="rey-icon rey-icon-reycore-icon-heart rey-wishlistBtn-icon"
+                                        <i
+                                          class="fa fa-heart-o"
                                           aria-hidden="true"
-                                          role="img"
-                                        ></svg>
+                                        ></i>
                                       </a>
                                     </div>
                                   </div>
@@ -3241,41 +3383,91 @@ function product() {
                               </div>
                             </li>
                             <li
-                              class="product is-animated rey-wc-skin--basic --customImageContainerHeight rey-wc-loopAlign-left --extraImg-no --extraImg-mobile --uncropped type-product post-1172874 status-publish last instock product_cat-jackets-coats-jackets has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes splide__slide"
-                              data-pid="1172874"
-                              id="splide01-slide08"
+                              class="product is-animated rey-wc-skin--basic --customImageContainerHeight rey-wc-loopAlign-left --extraImg-no --extraImg-mobile --uncropped type-product post-1172703 status-publish first instock product_cat-jackets-coats-jackets has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes splide__slide is-active is-visible"
+                              data-pid="1172703"
+                              id="splide01-slide01"
                               style={{ marginRight: "30px", width: "296.25px" }}
-                              aria-hidden="true"
-                              tabindex="-1"
+                              aria-hidden="false"
+                              tabindex="0"
                             >
-                              <div class="rey-productInner" data-id="1172874">
+                              <div class="rey-productInner" data-id="1172703">
                                 <div class="rey-productThumbnail">
                                   <a
-                                    href="https://ivloo.com/NikePlusclassicpaddedjacketwithhoodinblack-23525731/"
+                                    href="https://ivloo.com/Onlyfauxleatherjacket-9158369/"
                                     class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
                                   >
                                     <img
                                       width="1"
                                       height="1"
-                                      src="https://images.asos-media.com/products/nike-plus-classic-padded-jacket-with-hood-in-black/23525731-1-black?$n_750w$&amp;wid=750&amp;fit=constrain"
+                                      src="https://images.asos-media.com/products/only-faux-leather-jacket/9158369-1-black?$n_750w$&amp;wid=750&amp;fit=constrain"
                                       class="rey-thumbImg img--1 attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                                       alt=""
                                       loading="lazy"
                                     />
                                   </a>{" "}
                                 </div>
+                                <div
+                                  style={{
+                                    width: "100%",
+                                    display: "flex",
+                                    backgroundColor: "#EBEBEB",
+                                  }}
+                                >
+                                  <div
+                                    style={{
+                                      width: "50%",
+                                      textAlign: "center",
+                                      padding: "7px 0px",
+                                    }}
+                                  >
+                                    <i
+                                      class="fa fa-play"
+                                      aria-hidden="true"
+                                    ></i>
+                                    Video
+                                  </div>
+                                  <div
+                                    style={{
+                                      width: "50%",
+                                      textAlign: "center",
+                                      padding: "7px 0px",
+                                    }}
+                                  >
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    (3 Ratings)
+                                  </div>
+                                </div>
+
                                 <div class="rey-brandLink">
-                                  <a href="https://ivloo.com/shop/?filter_brand=nike">
-                                    Nike
+                                  <a href="https://ivloo.com/shop/?filter_brand=only">
+                                    Only
                                   </a>
                                 </div>
                                 <h2
                                   class="woocommerce-loop-product__title"
                                   style={{ minHeight: "21px" }}
                                 >
-                                  <a href="https://ivloo.com/NikePlusclassicpaddedjacketwithhoodinblack-23525731/">
-                                    Nike Plus classic padded jacket with hood in
-                                    black
+                                  <a href="https://ivloo.com/Onlyfauxleatherjacket-9158369/">
+                                    Only faux leather jacket
                                   </a>
                                 </h2>
                                 <div class="rey-productLoop-footer">
@@ -3285,19 +3477,19 @@ function product() {
                                         <span class="woocommerce-Price-currencySymbol">
                                           $
                                         </span>
-                                        166.00
+                                        87.00
                                       </bdi>
                                     </span>
                                   </span>
                                   <div class="rey-productFooter-item rey-productFooter-item--addtocart">
                                     <div class="rey-productFooter-inner">
                                       <a
-                                        href="https://ivloo.com/NikePlusclassicpaddedjacketwithhoodinblack-23525731/"
+                                        href="https://ivloo.com/Onlyfauxleatherjacket-9158369/"
                                         data-quantity="1"
                                         class="button product_type_variable add_to_cart_button rey-btn--clean"
-                                        data-product_id="1172874"
-                                        data-product_sku="23525731"
-                                        aria-label="Select options for “Nike Plus classic padded jacket with hood in black”"
+                                        data-product_id="1172703"
+                                        data-product_sku="9158369"
+                                        aria-label="Select options for “Only faux leather jacket”"
                                         rel="nofollow"
                                       >
                                         <span class="__text">Add to cart</span>
@@ -3308,9 +3500,9 @@ function product() {
                                   <div class="rey-productFooter-item rey-productFooter-item--quickview">
                                     <div class="rey-productFooter-inner">
                                       <a
-                                        href="https://ivloo.com/NikePlusclassicpaddedjacketwithhoodinblack-23525731/"
+                                        href="https://ivloo.com/Onlyfauxleatherjacket-9158369/"
                                         class="button rey-btn--clean rey-quickviewBtn js-rey-quickviewBtn"
-                                        data-id="1172874"
+                                        data-id="1172703"
                                         title="QUICKVIEW"
                                       >
                                         QUICKVIEW
@@ -3320,17 +3512,16 @@ function product() {
                                   <div class="rey-productFooter-item rey-productFooter-item--wishlist">
                                     <div class="rey-productFooter-inner">
                                       <a
-                                        href="https://ivloo.com/NikePlusclassicpaddedjacketwithhoodinblack-23525731/"
+                                        href="https://ivloo.com/Onlyfauxleatherjacket-9158369/"
                                         class="--show-mobile--top rey-wishlistBtn rey-wishlistBtn-link"
-                                        data-id="1172874"
+                                        data-id="1172703"
                                         aria-label="Add to wishlist"
                                         data-rey-tooltip='{"text":"Add to wishlist","class":"--basic","fixed":true}'
                                       >
-                                        <svg
-                                          class="rey-icon rey-icon-reycore-icon-heart rey-wishlistBtn-icon"
+                                        <i
+                                          class="fa fa-heart-o"
                                           aria-hidden="true"
-                                          role="img"
-                                        ></svg>
+                                        ></i>
                                       </a>
                                     </div>
                                   </div>
@@ -3338,40 +3529,91 @@ function product() {
                               </div>
                             </li>
                             <li
-                              class="product is-animated rey-wc-skin--basic --customImageContainerHeight rey-wc-loopAlign-left --extraImg-no --extraImg-mobile --uncropped type-product post-1172916 status-publish first instock product_cat-jackets-coats-jackets has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes splide__slide"
-                              data-pid="1172916"
-                              id="splide01-slide09"
+                              class="product is-animated rey-wc-skin--basic --customImageContainerHeight rey-wc-loopAlign-left --extraImg-no --extraImg-mobile --uncropped type-product post-1172893 status-publish instock product_cat-jackets-coats-jackets has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes splide__slide is-visible"
+                              data-pid="1172893"
+                              id="splide01-slide02"
                               style={{ marginRight: "30px", width: "296.25px" }}
-                              aria-hidden="true"
-                              tabindex="-1"
+                              aria-hidden="false"
+                              tabindex="0"
                             >
-                              <div class="rey-productInner" data-id="1172916">
+                              <div class="rey-productInner" data-id="1172893">
                                 <div class="rey-productThumbnail">
                                   <a
-                                    href="https://ivloo.com/NewLookshacketinoatmeal-200971491/"
+                                    href="https://ivloo.com/Bershkacroppedpufferjacketinbrown-200955026/"
                                     class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
                                   >
                                     <img
                                       width="1"
                                       height="1"
-                                      src="https://images.asos-media.com/products/new-look-shacket-in-oatmeal/200971491-1-oatmeal?$n_750w$&amp;wid=750&amp;fit=constrain"
+                                      src="https://images.asos-media.com/products/bershka-cropped-puffer-jacket-in-brown/200955026-1-brown?$n_750w$&amp;wid=750&amp;fit=constrain"
                                       class="rey-thumbImg img--1 attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                                       alt=""
                                       loading="lazy"
                                     />
                                   </a>{" "}
                                 </div>
+                                <div
+                                  style={{
+                                    width: "100%",
+                                    display: "flex",
+                                    backgroundColor: "#EBEBEB",
+                                  }}
+                                >
+                                  <div
+                                    style={{
+                                      width: "50%",
+                                      textAlign: "center",
+                                      padding: "7px 0px",
+                                    }}
+                                  >
+                                    <i
+                                      class="fa fa-play"
+                                      aria-hidden="true"
+                                    ></i>
+                                    Video
+                                  </div>
+                                  <div
+                                    style={{
+                                      width: "50%",
+                                      textAlign: "center",
+                                      padding: "7px 0px",
+                                    }}
+                                  >
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    <i
+                                      class="fa fa-star"
+                                      aria-hidden="true"
+                                    ></i>
+                                    (3 Ratings)
+                                  </div>
+                                </div>
+
                                 <div class="rey-brandLink">
-                                  <a href="https://ivloo.com/shop/?filter_brand=new-look">
-                                    New Look
+                                  <a href="https://ivloo.com/shop/?filter_brand=bershka">
+                                    Bershka
                                   </a>
                                 </div>
                                 <h2
                                   class="woocommerce-loop-product__title"
                                   style={{ minHeight: "21px" }}
                                 >
-                                  <a href="https://ivloo.com/NewLookshacketinoatmeal-200971491/">
-                                    New Look shacket in oatmeal
+                                  <a href="https://ivloo.com/Bershkacroppedpufferjacketinbrown-200955026/">
+                                    Bershka cropped puffer jacket in brown
                                   </a>
                                 </h2>
                                 <div class="rey-productLoop-footer">
@@ -3381,19 +3623,19 @@ function product() {
                                         <span class="woocommerce-Price-currencySymbol">
                                           $
                                         </span>
-                                        66.00
+                                        63.00
                                       </bdi>
                                     </span>
                                   </span>
                                   <div class="rey-productFooter-item rey-productFooter-item--addtocart">
                                     <div class="rey-productFooter-inner">
                                       <a
-                                        href="https://ivloo.com/NewLookshacketinoatmeal-200971491/"
+                                        href="https://ivloo.com/Bershkacroppedpufferjacketinbrown-200955026/"
                                         data-quantity="1"
                                         class="button product_type_variable add_to_cart_button rey-btn--clean"
-                                        data-product_id="1172916"
-                                        data-product_sku="200971491"
-                                        aria-label="Select options for “New Look shacket in oatmeal”"
+                                        data-product_id="1172893"
+                                        data-product_sku="200955026"
+                                        aria-label="Select options for “Bershka cropped puffer jacket in brown”"
                                         rel="nofollow"
                                       >
                                         <span class="__text">Add to cart</span>
@@ -3404,9 +3646,9 @@ function product() {
                                   <div class="rey-productFooter-item rey-productFooter-item--quickview">
                                     <div class="rey-productFooter-inner">
                                       <a
-                                        href="https://ivloo.com/NewLookshacketinoatmeal-200971491/"
+                                        href="https://ivloo.com/Bershkacroppedpufferjacketinbrown-200955026/"
                                         class="button rey-btn--clean rey-quickviewBtn js-rey-quickviewBtn"
-                                        data-id="1172916"
+                                        data-id="1172893"
                                         title="QUICKVIEW"
                                       >
                                         QUICKVIEW
@@ -3416,307 +3658,16 @@ function product() {
                                   <div class="rey-productFooter-item rey-productFooter-item--wishlist">
                                     <div class="rey-productFooter-inner">
                                       <a
-                                        href="https://ivloo.com/NewLookshacketinoatmeal-200971491/"
+                                        href="https://ivloo.com/Bershkacroppedpufferjacketinbrown-200955026/"
                                         class="--show-mobile--top rey-wishlistBtn rey-wishlistBtn-link"
-                                        data-id="1172916"
+                                        data-id="1172893"
                                         aria-label="Add to wishlist"
                                         data-rey-tooltip='{"text":"Add to wishlist","class":"--basic","fixed":true}'
                                       >
-                                        <svg
-                                          class="rey-icon rey-icon-reycore-icon-heart rey-wishlistBtn-icon"
+                                        <i
+                                          class="fa fa-heart-o"
                                           aria-hidden="true"
-                                          role="img"
-                                        ></svg>
-                                      </a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li
-                              class="product is-animated rey-wc-skin--basic --customImageContainerHeight rey-wc-loopAlign-left --extraImg-no --extraImg-mobile --uncropped type-product post-1172670 status-publish instock product_cat-jackets-coats-jackets has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes splide__slide"
-                              data-pid="1172670"
-                              id="splide01-slide10"
-                              style={{ marginRight: "30px", width: "296.25px" }}
-                              aria-hidden="true"
-                              tabindex="-1"
-                            >
-                              <div class="rey-productInner" data-id="1172670">
-                                <div class="rey-productThumbnail">
-                                  <a
-                                    href="https://ivloo.com/NativeYouthPlusoversizedhoodedpaddedjacketwithstrawberryembroideryinleopard-200354628/"
-                                    class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
-                                  >
-                                    <img
-                                      width="1"
-                                      height="1"
-                                      src="https://images.asos-media.com/products/native-youth-plus-oversized-hooded-padded-jacket-with-strawberry-embroidery-in-leopard/200354628-1-whiteblackleopard?$n_750w$&amp;wid=750&amp;fit=constrain"
-                                      class="rey-thumbImg img--1 attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                      alt=""
-                                      loading="lazy"
-                                    />
-                                  </a>{" "}
-                                </div>
-                                <div class="rey-brandLink">
-                                  <a href="https://ivloo.com/shop/?filter_brand=native-youth-plus">
-                                    Native Youth Plus
-                                  </a>
-                                </div>
-                                <h2
-                                  class="woocommerce-loop-product__title"
-                                  style={{ minHeight: "21px" }}
-                                >
-                                  <a href="https://ivloo.com/NativeYouthPlusoversizedhoodedpaddedjacketwithstrawberryembroideryinleopard-200354628/">
-                                    Native Youth Plus oversized hooded padded
-                                    jacket with strawberry embroidery in leopard
-                                  </a>
-                                </h2>
-                                <div class="rey-productLoop-footer">
-                                  <span class="price rey-loopPrice">
-                                    <span class="woocommerce-Price-amount amount">
-                                      <bdi>
-                                        <span class="woocommerce-Price-currencySymbol">
-                                          $
-                                        </span>
-                                        107.00
-                                      </bdi>
-                                    </span>
-                                  </span>
-                                  <div class="rey-productFooter-item rey-productFooter-item--addtocart">
-                                    <div class="rey-productFooter-inner">
-                                      <a
-                                        href="https://ivloo.com/NativeYouthPlusoversizedhoodedpaddedjacketwithstrawberryembroideryinleopard-200354628/"
-                                        data-quantity="1"
-                                        class="button product_type_variable add_to_cart_button rey-btn--clean"
-                                        data-product_id="1172670"
-                                        data-product_sku="200354628"
-                                        aria-label="Select options for “Native Youth Plus oversized hooded padded jacket with strawberry embroidery in leopard”"
-                                        rel="nofollow"
-                                      >
-                                        <span class="__text">Add to cart</span>
-                                        <span class="rey-lineLoader __ajax-preloader"></span>
-                                      </a>
-                                    </div>
-                                  </div>
-                                  <div class="rey-productFooter-item rey-productFooter-item--quickview">
-                                    <div class="rey-productFooter-inner">
-                                      <a
-                                        href="https://ivloo.com/NativeYouthPlusoversizedhoodedpaddedjacketwithstrawberryembroideryinleopard-200354628/"
-                                        class="button rey-btn--clean rey-quickviewBtn js-rey-quickviewBtn"
-                                        data-id="1172670"
-                                        title="QUICKVIEW"
-                                      >
-                                        QUICKVIEW
-                                      </a>
-                                    </div>
-                                  </div>
-                                  <div class="rey-productFooter-item rey-productFooter-item--wishlist">
-                                    <div class="rey-productFooter-inner">
-                                      <a
-                                        href="https://ivloo.com/NativeYouthPlusoversizedhoodedpaddedjacketwithstrawberryembroideryinleopard-200354628/"
-                                        class="--show-mobile--top rey-wishlistBtn rey-wishlistBtn-link"
-                                        data-id="1172670"
-                                        aria-label="Add to wishlist"
-                                        data-rey-tooltip='{"text":"Add to wishlist","class":"--basic","fixed":true}'
-                                      >
-                                        <svg
-                                          class="rey-icon rey-icon-reycore-icon-heart rey-wishlistBtn-icon"
-                                          aria-hidden="true"
-                                          role="img"
-                                        ></svg>
-                                      </a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li
-                              class="product is-animated rey-wc-skin--basic --customImageContainerHeight rey-wc-loopAlign-left --extraImg-no --extraImg-mobile --uncropped type-product post-1172547 status-publish instock product_cat-jackets-coats-jackets has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes splide__slide"
-                              data-pid="1172547"
-                              id="splide01-slide11"
-                              style={{ marginRight: "30px", width: "296.25px" }}
-                              aria-hidden="true"
-                              tabindex="-1"
-                            >
-                              <div class="rey-productInner" data-id="1172547">
-                                <div class="rey-productThumbnail">
-                                  <a
-                                    href="https://ivloo.com/NewLookshacketingrey-201028869/"
-                                    class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
-                                  >
-                                    <img
-                                      width="1"
-                                      height="1"
-                                      src="https://images.asos-media.com/products/new-look-shacket-in-grey/201028869-1-lightgrey?$n_750w$&amp;wid=750&amp;fit=constrain"
-                                      class="rey-thumbImg img--1 attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                      alt=""
-                                      loading="lazy"
-                                    />
-                                  </a>{" "}
-                                </div>
-                                <div class="rey-brandLink">
-                                  <a href="https://ivloo.com/shop/?filter_brand=new-look">
-                                    New Look
-                                  </a>
-                                </div>
-                                <h2
-                                  class="woocommerce-loop-product__title"
-                                  style={{ minHeight: "21px" }}
-                                >
-                                  <a href="https://ivloo.com/NewLookshacketingrey-201028869/">
-                                    New Look shacket in grey
-                                  </a>
-                                </h2>
-                                <div class="rey-productLoop-footer">
-                                  <span class="price rey-loopPrice">
-                                    <span class="woocommerce-Price-amount amount">
-                                      <bdi>
-                                        <span class="woocommerce-Price-currencySymbol">
-                                          $
-                                        </span>
-                                        66.00
-                                      </bdi>
-                                    </span>
-                                  </span>
-                                  <div class="rey-productFooter-item rey-productFooter-item--addtocart">
-                                    <div class="rey-productFooter-inner">
-                                      <a
-                                        href="https://ivloo.com/NewLookshacketingrey-201028869/"
-                                        data-quantity="1"
-                                        class="button product_type_variable add_to_cart_button rey-btn--clean"
-                                        data-product_id="1172547"
-                                        data-product_sku="201028869"
-                                        aria-label="Select options for “New Look shacket in grey”"
-                                        rel="nofollow"
-                                      >
-                                        <span class="__text">Add to cart</span>
-                                        <span class="rey-lineLoader __ajax-preloader"></span>
-                                      </a>
-                                    </div>
-                                  </div>
-                                  <div class="rey-productFooter-item rey-productFooter-item--quickview">
-                                    <div class="rey-productFooter-inner">
-                                      <a
-                                        href="https://ivloo.com/NewLookshacketingrey-201028869/"
-                                        class="button rey-btn--clean rey-quickviewBtn js-rey-quickviewBtn"
-                                        data-id="1172547"
-                                        title="QUICKVIEW"
-                                      >
-                                        QUICKVIEW
-                                      </a>
-                                    </div>
-                                  </div>
-                                  <div class="rey-productFooter-item rey-productFooter-item--wishlist">
-                                    <div class="rey-productFooter-inner">
-                                      <a
-                                        href="https://ivloo.com/NewLookshacketingrey-201028869/"
-                                        class="--show-mobile--top rey-wishlistBtn rey-wishlistBtn-link"
-                                        data-id="1172547"
-                                        aria-label="Add to wishlist"
-                                        data-rey-tooltip='{"text":"Add to wishlist","class":"--basic","fixed":true}'
-                                      >
-                                        <svg
-                                          class="rey-icon rey-icon-reycore-icon-heart rey-wishlistBtn-icon"
-                                          aria-hidden="true"
-                                          role="img"
-                                        ></svg>
-                                      </a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li
-                              class="product is-animated rey-wc-skin--basic --customImageContainerHeight rey-wc-loopAlign-left --extraImg-no --extraImg-mobile --uncropped type-product post-1172669 status-publish last instock product_cat-jackets-coats-jackets has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes splide__slide"
-                              data-pid="1172669"
-                              id="splide01-slide12"
-                              style={{ marginRight: "30px", width: "296.25px" }}
-                              aria-hidden="true"
-                              tabindex="-1"
-                            >
-                              <div class="rey-productInner" data-id="1172669">
-                                <div class="rey-productThumbnail">
-                                  <a
-                                    href="https://ivloo.com/PiecesPetitebeltedpaddedbomberjacketinblack-201253291/"
-                                    class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
-                                  >
-                                    <img
-                                      width="1"
-                                      height="1"
-                                      src="https://images.asos-media.com/products/pieces-petite-belted-padded-bomber-jacket-in-black/201253291-1-black?$n_750w$&amp;wid=750&amp;fit=constrain"
-                                      class="rey-thumbImg img--1 attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                      alt=""
-                                      loading="lazy"
-                                    />
-                                  </a>{" "}
-                                </div>
-                                <div class="rey-brandLink">
-                                  <a href="https://ivloo.com/shop/?filter_brand=pieces-petite">
-                                    Pieces Petite
-                                  </a>
-                                </div>
-                                <h2
-                                  class="woocommerce-loop-product__title"
-                                  style={{ minHeight: "21px" }}
-                                >
-                                  <a href="https://ivloo.com/PiecesPetitebeltedpaddedbomberjacketinblack-201253291/">
-                                    Pieces Petite belted padded bomber jacket in
-                                    black
-                                  </a>
-                                </h2>
-                                <div class="rey-productLoop-footer">
-                                  <span class="price rey-loopPrice">
-                                    <span class="woocommerce-Price-amount amount">
-                                      <bdi>
-                                        <span class="woocommerce-Price-currencySymbol">
-                                          $
-                                        </span>
-                                        118.00
-                                      </bdi>
-                                    </span>
-                                  </span>
-                                  <div class="rey-productFooter-item rey-productFooter-item--addtocart">
-                                    <div class="rey-productFooter-inner">
-                                      <a
-                                        href="https://ivloo.com/PiecesPetitebeltedpaddedbomberjacketinblack-201253291/"
-                                        data-quantity="1"
-                                        class="button product_type_variable add_to_cart_button rey-btn--clean"
-                                        data-product_id="1172669"
-                                        data-product_sku="201253291"
-                                        aria-label="Select options for “Pieces Petite belted padded bomber jacket in black”"
-                                        rel="nofollow"
-                                      >
-                                        <span class="__text">Add to cart</span>
-                                        <span class="rey-lineLoader __ajax-preloader"></span>
-                                      </a>
-                                    </div>
-                                  </div>
-                                  <div class="rey-productFooter-item rey-productFooter-item--quickview">
-                                    <div class="rey-productFooter-inner">
-                                      <a
-                                        href="https://ivloo.com/PiecesPetitebeltedpaddedbomberjacketinblack-201253291/"
-                                        class="button rey-btn--clean rey-quickviewBtn js-rey-quickviewBtn"
-                                        data-id="1172669"
-                                        title="QUICKVIEW"
-                                      >
-                                        QUICKVIEW
-                                      </a>
-                                    </div>
-                                  </div>
-                                  <div class="rey-productFooter-item rey-productFooter-item--wishlist">
-                                    <div class="rey-productFooter-inner">
-                                      <a
-                                        href="https://ivloo.com/PiecesPetitebeltedpaddedbomberjacketinblack-201253291/"
-                                        class="--show-mobile--top rey-wishlistBtn rey-wishlistBtn-link"
-                                        data-id="1172669"
-                                        aria-label="Add to wishlist"
-                                        data-rey-tooltip='{"text":"Add to wishlist","class":"--basic","fixed":true}'
-                                      >
-                                        <svg
-                                          class="rey-icon rey-icon-reycore-icon-heart rey-wishlistBtn-icon"
-                                          aria-hidden="true"
-                                          role="img"
-                                        ></svg>
+                                        ></i>
                                       </a>
                                     </div>
                                   </div>

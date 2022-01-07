@@ -27,14 +27,6 @@ export default function Home({ allPostsData }) {
 
         <link
           rel="stylesheet"
-          id="rey-wp-style-css"
-          href="https://ivloo.com/wp-content/themes/rey/style.min.css?ver=2.2.1.1"
-          type="text/css"
-          media="all"
-        />
-
-        <link
-          rel="stylesheet"
           id="elementor-frontend-css"
           href="https://ivloo.com/wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.4.8"
           type="text/css"
