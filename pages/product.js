@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Dropdown, Accordion, Icon } from "semantic-ui-react";
 import { Dots, slidesToShowPlugin } from "@brainhubeu/react-carousel";
 import dynamic from "next/dynamic";
-
 const Carousel = dynamic(() => import("@brainhubeu/react-carousel"), {
   ssr: false,
 });
@@ -14,6 +13,8 @@ function product() {
     { key: "al", value: "al", text: "Albania" },
     { key: "dz", value: "dz", text: "Algeria" },
   ];
+  const [post, setPost] = React.useState(null);
+
   const [value, setVal] = useState(0);
 
   const [activeIndex, setactiveIndex] = useState(1);
@@ -21,21 +22,27 @@ function product() {
 
   const [Slides, setSlidse] = useState({
     slides: [
-      <img
-        src={
-          "https://images.asos-media.com/products/asos-design-curve-cotton-shacket-in-light-khaki/200407184-1-lightkhaki?$n_750w$&wid=750&fit=constrain"
-        }
-      />,
-      <img
-        src={
-          "https://images.asos-media.com/products/asos-design-curve-cotton-shacket-in-light-khaki/200407184-1-lightkhaki?$n_750w$&wid=750&fit=constrain"
-        }
-      />,
-      <img
-        src={
-          "https://images.asos-media.com/products/asos-design-curve-cotton-shacket-in-light-khaki/200407184-1-lightkhaki?$n_750w$&wid=750&fit=constrain"
-        }
-      />,
+      <div style={{ marginInline: "5px", marginTop: "100px" }}>
+        <img
+          src={
+            "https://images.asos-media.com/products/asos-design-curve-cotton-shacket-in-light-khaki/200407184-1-lightkhaki?$n_750w$&wid=750&fit=constrain"
+          }
+        />
+      </div>,
+      <div style={{ marginInline: "5px", marginTop: "100px" }}>
+        <img
+          src={
+            "https://images.asos-media.com/products/asos-design-curve-cotton-shacket-in-light-khaki/200407184-1-lightkhaki?$n_750w$&wid=750&fit=constrain"
+          }
+        />
+      </div>,
+      <div style={{ marginInline: "5px", marginTop: "100px" }}>
+        <img
+          src={
+            "https://images.asos-media.com/products/asos-design-curve-cotton-shacket-in-light-khaki/200407184-1-lightkhaki?$n_750w$&wid=750&fit=constrain"
+          }
+        />
+      </div>,
     ],
     thumbnails: [
       <img
@@ -91,7 +98,7 @@ function product() {
   return (
     <>
       <head>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>
           IVLOO DESIGN cord colour block denim jacket in brown | IVLOO
@@ -101,6 +108,13 @@ function product() {
           href="/product.css"
           type="text/css"
           media="all"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
+          integrity="sha512-XJ3ntWHl40opEiE+6dGhfK9NAKOCELrpjiBRQKtu6uJf9Pli8XY+Hikp7rlFzY4ElLSFtzjx9GGgHql7PLSeog=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
         />
         <link
           rel="stylesheet"
@@ -252,7 +266,13 @@ function product() {
                               display: "flex",
                             }}
                           >
-                            <div style={{ width: "10%", height: "100%" }}>
+                            <div
+                              style={{
+                                width: "10%",
+                                height: "100%",
+                                marginTop: "100px",
+                              }}
+                            >
                               <Dots
                                 number={Slides.thumbnails.length}
                                 thumbnails={Slides.thumbnails}
@@ -261,7 +281,7 @@ function product() {
                                 number={Slides.slides.length}
                               />
                             </div>
-                            <div style={{ width: "90%", height: "100%" }}>
+                            <div style={{ width: "90%" }}>
                               <Carousel
                                 plugins={[
                                   "infinite",
@@ -298,6 +318,38 @@ function product() {
                                 slides={Slides.slides}
                                 onChange={onchange}
                               />
+                              <div
+                                style={{
+                                  width: "100%",
+                                  display: "flex",
+                                  backgroundColor: "#EBEBEB",
+                                }}
+                              >
+                                <div
+                                  style={{
+                                    width: "50%",
+                                    textAlign: "center",
+                                    padding: "7px 0px",
+                                  }}
+                                >
+                                  <i class="fa fa-play" aria-hidden="true"></i>
+                                  Video
+                                </div>
+                                <div
+                                  style={{
+                                    width: "50%",
+                                    textAlign: "center",
+                                    padding: "7px 0px",
+                                  }}
+                                >
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  (3 Ratings)
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </figure>

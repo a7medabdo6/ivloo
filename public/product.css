@@ -1379,7 +1379,7 @@ div.rey-productSummary > div.summary.entry-summary > div > nav.rey-breadcrumbs {
 .BrainhubCarousel__trackContainer,
 ul.BrainhubCarousel__track,
 .BrainhubCarouselItem img {
-  height: 100% !important;
+  /* height: 100% !important;*/
 }
 .accordion.ui.styled {
   height: 100%;
@@ -1393,11 +1393,24 @@ ul.BrainhubCarousel__track,
 .woocommerce-product-gallery__mobileWrapper {
   display: none;
 }
-
+.woocommerce div.product .BrainhubCarouselItem div img {
+  height: 700px !important;
+}
+.BrainhubCarousel__dots .BrainhubCarousel__thumbnail {
+  padding: 5px !important;
+}
+.woocommerce table.shop_attributes td p:last-child {
+  margin-bottom: 0px !important;
+}
 .cartBtnQty-controls2 {
   border: 1px solid black;
   border-radius: 5px;
   margin: 0px 5px;
+}
+.rey-innerSummary .priceMobile {
+  display: inline-block !important;
+  flex: unset !important;
+  margin-bottom: 0px !important;
 }
 .savedivmobile,
 .priceMobile.price,
@@ -1405,6 +1418,16 @@ ul.BrainhubCarousel__track,
 .Accordion_on_mobile {
   display: none;
 }
+.BrainhubCarouselItem {
+  /*  margin-inline: 2.5px !important;*/
+}
+.BrainhubCarouselItem {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
 @media only screen and (max-width: 768px) {
   .woocommerce-product-rating,
   .sizesOn_mobile,
@@ -1427,9 +1450,4 @@ ul.BrainhubCarousel__track,
   .cartBtnQty-controls2 {
     display: block;
   }
-}
-.rey-innerSummary .priceMobile {
-  display: inline-block !important;
-  flex: unset !important;
-  margin-bottom: 0px !important;
 }
